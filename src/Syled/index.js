@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components"
-import React, { Component } from 'react';
+import React from 'react';
   
 const rotate360 = keyframes`
   from {
@@ -30,7 +30,4 @@ const Button = styled.button.attrs({children:props => <Icon speed={props.speed} 
   background: blue;
   padding: 50px;
 `
-
-
-
 export default Button;
