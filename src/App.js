@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ButtonCSS from "./CSS";
+import ButtonStyled from './Syled';
 
 class App extends Component {
   render() {
@@ -8,9 +10,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
+          <ButtonCSS />
           <a
             className="App-link"
             href="https://reactjs.org"
@@ -19,6 +19,7 @@ class App extends Component {
           >
             Learn React
           </a>
+          <ButtonStyled speed="0.1s" />
         </header>
       </div>
     );
