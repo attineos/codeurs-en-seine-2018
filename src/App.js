@@ -13,6 +13,15 @@ import { Header, Image, Link } from './Styled/components'
 import { LiveCodingPage, TitlePage } from './Styled/pages'
 
 class App extends Component {
+
+  renderTitle() {
+    return <TitlePage />
+  }
+
+  renderLiveCoding() {
+    return <LiveCodingPage />
+  }
+
   render() {
     return (
       <Fragment>
@@ -31,17 +40,11 @@ class App extends Component {
             <Route exact path="/" render={() => (<Redirect to="/title" />)} />
             <Route
               path="/title"
-              component={() => (
-                <TitlePage
-                />
-              )}
+              component={this.renderTitle}
             />
             <Route
               path="/live-coding"
-              component={() => (
-                <LiveCodingPage
-                />
-              )}
+              component={this.renderLiveCoding}
             />
             {/* <NotFoundRoute /> */}
           </Switch>
