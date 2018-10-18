@@ -3,7 +3,7 @@ import React, { Component, Fragment } from 'react'
 import ButtonCSS from "../../CSS"
 import ButtonStyled from '../../Styled'
 
-class LiveCoding extends Component {
+class LiveCodingPage extends Component {
 
   render() {
     return (
@@ -15,4 +15,4 @@ class LiveCoding extends Component {
   }
 }
 
-export default LiveCoding
+export default LiveCodingPage

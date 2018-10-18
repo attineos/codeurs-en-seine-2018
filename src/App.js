@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react'
 import logo from './logo.svg'
-import './App.css'
 
 import {
   Route,
@@ -11,7 +10,7 @@ import {
 
 import { Header, Image, Link } from './Styled/components'
 
-import { LiveCoding, TitlePage } from './Styled/pages'
+import { LiveCodingPage, TitlePage } from './Styled/pages'
 
 class App extends Component {
   render() {
@@ -40,7 +39,7 @@ class App extends Component {
             <Route
               path="/live-coding"
               component={() => (
-                <LiveCoding
+                <LiveCodingPage
                 />
               )}
             />

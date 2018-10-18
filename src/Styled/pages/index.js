@@ -1,7 +1,7 @@
-import LiveCoding from './LiveCoding'
+import LiveCodingPage from './LiveCodingPage'
 import TitlePage from './TitlePage'
 
 export {
-  LiveCoding,
+  LiveCodingPage,
   TitlePage,
 }
