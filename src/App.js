@@ -14,12 +14,16 @@ import { LiveCodingPage, TitlePage } from './Styled/pages'
 
 class App extends Component {
 
-  renderTitle() {
-    return <TitlePage />
+  renderRoot() {
+    return <Redirect to="/title" />
   }
 
   renderLiveCoding() {
     return <LiveCodingPage />
+  }
+
+  renderTitle() {
+    return <TitlePage />
   }
 
   render() {
@@ -37,7 +41,7 @@ class App extends Component {
         </Header>
         <BrowserRouter>
           <Switch>
-            <Route exact path="/" render={() => (<Redirect to="/title" />)} />
+            <Route exact path="/" render={this.renderRoot} />
             <Route
               path="/title"
               component={this.renderTitle}
