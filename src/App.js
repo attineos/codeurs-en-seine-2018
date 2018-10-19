@@ -8,7 +8,7 @@ import {
   Switch,
 } from 'react-router-dom'
 
-import { Header, Image, Link } from './Styled/components'
+import { Header, Image, Link, Paragraph } from './Styled/components'
 
 import { LiveCodingPage, TitlePage } from './Styled/pages'
 
@@ -36,7 +36,7 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            <Paragraph mb="0px" mt="0px">Learn React</Paragraph>
           </Link>
         </Header>
         <BrowserRouter>
