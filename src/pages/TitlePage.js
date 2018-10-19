@@ -7,7 +7,7 @@ import {
   kindarenaLogoLong,
   reactLogo,
   styledCompoLogo,
-} from '../../images'
+} from '../images'
 
 class TitlePage extends Component {
 
