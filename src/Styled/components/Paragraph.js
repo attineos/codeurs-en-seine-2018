@@ -8,6 +8,7 @@ const Paragraph = styled.p`
   margin-bottom: ${({ mb }) => mb || '0px'};
   margin-right: ${({ mr }) => mr || '0px'};
   margin-left: ${({ ml }) => ml || '0px'};
+  color: ${({ col }) => col || 'white'};
 `
 
 export default Paragraph

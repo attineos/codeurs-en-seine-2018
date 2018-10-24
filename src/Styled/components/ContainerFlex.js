@@ -9,6 +9,10 @@ const ContainerFlex = styled.div`
   margin-bottom: ${({ mb }) => mb || '0px'};
   margin-right: ${({ mr }) => mr || '0px'};
   margin-left: ${({ ml }) => ml || '0px'};
+  background-color: ${({ bc }) => bc || 'transparent'};
+  color: ${({ col }) => col || 'white'};
+  width: ${({ w }) => w || '100%'};
+  height: ${({ h }) => h || '100%'};
 `
 
 export default ContainerFlex

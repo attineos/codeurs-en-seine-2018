@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import logo from './logo.svg'
+// import logo from './logo.svg'
 
 import {
   Route,
@@ -8,28 +8,80 @@ import {
   Switch,
 } from 'react-router-dom'
 
-import { Header, Image, Link, Paragraph } from './Styled/components'
+// import { Header, Image, Link, Paragraph } from './Styled/components'
+
+import {
+  URL_LIVE_CODING_PAGE,
+  URL_TITLE_PAGE,
+} from './Styled/config'
 
 import { LiveCodingPage, TitlePage } from './Styled/pages'
 
 class App extends Component {
 
-  renderRoot() {
-    return <Redirect to="/title" />
+  state = {
+    currentPage: 'waiting',
   }
 
-  renderLiveCoding() {
+  handlePreviousPage = () => {
+    const {
+      currentPage
+    } = this.state
+    let newPage = ''
+    switch(currentPage) {
+      case 'title': newPage = 'waiting'
+        break;
+      default: newPage = 'waiting'
+    }
+
+    this.setState({
+      currentPage: newPage,
+    })
+  }
+
+  handleNextPage = () => {
+    const {
+      currentPage
+    } = this.state
+    let newPage = ''
+    switch(currentPage) {
+      case 'waiting': newPage = 'title'
+        break;
+      case 'title': newPage = 'live-coding'
+        document.location.href = URL_LIVE_CODING_PAGE
+        break;
+      default: newPage = 'waiting'
+    }
+
+    this.setState({
+      currentPage: newPage,
+    })
+  }
+
+  renderRoot () {
+    return <Redirect to={URL_TITLE_PAGE} />
+  }
+
+  renderLiveCoding () {
     return <LiveCodingPage />
   }
 
-  renderTitle() {
-    return <TitlePage />
+  renderTitle () {
+    return <TitlePage
+      next
+    />
+  }
+
+  renderWaitingTitle () {
+    return <TitlePage
+    />
   }
 
   render() {
+    const {currentPage} = this.state
     return (
       <Fragment>
-        <Header>
+        {/* <Header>
           <Image src={logo} mode="rotate" alt="logo" />
           <Link
             href="https://reactjs.org"
@@ -38,21 +90,23 @@ class App extends Component {
           >
             <Paragraph mb="0px" mt="0px">Learn React</Paragraph>
           </Link>
-        </Header>
+        </Header> */}
         <BrowserRouter>
           <Switch>
             <Route exact path="/" render={this.renderRoot} />
             <Route
-              path="/title"
-              component={this.renderTitle}
+              path={URL_TITLE_PAGE}
+              component={currentPage === 'title' ? this.renderTitle : this.renderWaitingTitle}
             />
             <Route
-              path="/live-coding"
+              path={URL_LIVE_CODING_PAGE}
               component={this.renderLiveCoding}
             />
             {/* <NotFoundRoute /> */}
           </Switch>
         </BrowserRouter>
+        <div style={{position: 'absolute', bottom: '25px', left: '25px', color: "red" }} onClick={this.handlePreviousPage}>Previous</div>
+        <div style={{position: 'absolute', bottom: '25px', right: '25px', color: "red" }} onClick={this.handleNextPage}>Next</div>
       </Fragment>
     );
   }

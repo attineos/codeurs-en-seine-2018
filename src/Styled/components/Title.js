@@ -9,6 +9,7 @@ const Title = styled.h1`
   margin-bottom: ${({ mb }) => mb || '0px'};
   margin-right: ${({ mr }) => mr || '0px'};
   margin-left: ${({ ml }) => ml || '0px'};
+  color: ${({ col }) => col || 'white'};
 `
 
 export default Title
