@@ -3,6 +3,7 @@ import styled from 'styled-components'
 const Paragraph = styled.p`
   font-weight: 400;
   font-size: 25px;
+  text-align: center;
   font-family: 'Lato', sans-serif;
   margin-top: ${({ mt }) => mt || '0px'};
   margin-bottom: ${({ mb }) => mb || '0px'};

@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 
-import { ContainerFlex, Image, Paragraph, SubTitle, Title } from '../components'
+import { ContainerFlex, Image, Paragraph, TitleSection } from '../components'
 
 import {
-  codeursEnSeineLogoWhite,
-  photo,
+  attineosLogo,
   kindarenaLogoLong,
   reactLogo,
   styledCompoLogo,
@@ -13,37 +12,26 @@ import {
 class TitlePage extends Component {
 
   render() {
-    const {
-      next,
-    } = this.props
 
     return (
       <ContainerFlex>
-        <ContainerFlex fd="column" bc="blue" onClick={this.goPrev}>
-          <ContainerFlex h="80%" fd="column" jc="center" ai="center">
-            <Title>Style(d) et React, même Compo</Title>
-            <SubTitle>Codeurs en Seine 2018</SubTitle>
-            <Paragraph>Marion DEVEAUX</Paragraph>
-            <Paragraph>Valentin DESPORTES</Paragraph>
+        <TitleSection />
+        <ContainerFlex fd="column" jc="center" ai="center">
+          <ContainerFlex fd="column">
+            <ContainerFlex jc="space-around" ai="flex-end">
+              <Image src={reactLogo} h="150px" alt="logo reactjs" />
+              <Image src={styledCompoLogo} h="100px" mb="20px" alt="logo styled-components" />
+            </ContainerFlex>
+            <ContainerFlex jc="space-around" ai="flex-start" h='auto'>
+              <Paragraph mt="25px" col="blue">Reactjs : HTML in JS</Paragraph>
+              <Paragraph mt="25px" col="blue">Styled-components : CSS in JS</Paragraph>
+            </ContainerFlex>
           </ContainerFlex>
-          <ContainerFlex h="20%" jc="space-around" ai="flex-end">
-            <Image src={codeursEnSeineLogoWhite} h="110px" alt="logo react et styled-components" />
-            <Image src={kindarenaLogoLong} h="100px" alt="logo Kindarena" />
+          <ContainerFlex fd="column" jc="flex-end" ai="center">
+            <Image src={kindarenaLogoLong} h="75px" mb="75px" alt="logo Kindarena" />
+            <Image src={attineosLogo} h="50px" mb="75px" alt="logo Kindarena" />
           </ContainerFlex>
         </ContainerFlex>
-        { !next && (
-          <ContainerFlex fd="column" jc="center" ai="center" onClick={this.goNext}>
-            <Image src={reactLogo} h="20%" alt="logo reactjs" />
-              <SubTitle col="blue">Reactjs : HTML in JS</SubTitle>
-            <Image src={styledCompoLogo} h="15%" alt="logo styled-components" />
-              <SubTitle col="blue">Styled-components : CSS in JS</SubTitle>
-          </ContainerFlex>
-        )}
-        { next && (
-          <ContainerFlex fd="column" jc="center">
-            <Image src={photo} h="inherit" alt="logo react et styled-components" />
-          </ContainerFlex>
-        )}
       </ContainerFlex>
     )
   }
