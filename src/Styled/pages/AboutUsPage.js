@@ -19,7 +19,7 @@ class AboutUsPage extends Component {
           <ContainerFlex h="80%" fd="column" jc="center" ai="center">
             <Title mb="35px">Marion DEVEAUX</Title>
             <SubTitle>Ingénieure d'études et développement</SubTitle>
-            <Paragraph>Reactjs</Paragraph>
+            <Paragraph>React</Paragraph>
             <Paragraph>Styled-components</Paragraph>
             <Paragraph>Zend Framework 2</Paragraph>
             <Paragraph>Basketball</Paragraph>
@@ -36,10 +36,11 @@ class AboutUsPage extends Component {
           <ContainerFlex h="80%" fd="column" jc="center" ai="center">
             <Title mb="35px">Valentin DESPORTES</Title>
             <SubTitle>Ingénieur d'études et développement</SubTitle>
-            <Paragraph>Reactjs</Paragraph>
+            <Paragraph>React</Paragraph>
+            <Paragraph>React Native</Paragraph>
             <Paragraph>Styled-components</Paragraph>
-            <Paragraph>NodeJs</Paragraph>
-            <Paragraph>Hobbies</Paragraph>
+            <Paragraph>NodeJS</Paragraph>
+            <Paragraph>Overwatch</Paragraph>
           </ContainerFlex>
         </ContainerFlex>
       </ContainerFlex>

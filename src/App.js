@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react'
-// import logo from './logo.svg'
 
 import {
   Router,
@@ -13,6 +12,7 @@ import createBrowserHistory from "history/createBrowserHistory"
 import {
   LINK_NEXT_PAGE_NAME_ATTR,
   LINK_PREVIOUS_PAGE_NAME_ATTR,
+  NAVIGATION,
   URL_ABOUT_US_PAGE,
   URL_END_PAGE,
   URL_LIVE_CODING_PAGE,
@@ -37,42 +37,12 @@ class App extends Component {
   history = createBrowserHistory()
 
   handleChangePage = (e) => {
+    const nextPage = LINK_PREVIOUS_PAGE_NAME_ATTR === e.currentTarget.name ? 'prev' : 'next'
 
-    const goToPrev = LINK_PREVIOUS_PAGE_NAME_ATTR === e.currentTarget.name
+    const currentPage = document.location.pathname
 
-    switch(document.location.pathname) {
-      case URL_TITLE_PAGE:
-        if(goToPrev) {
-          this.history.push(URL_WAITING_PAGE)
-        } else {
-          this.history.push(URL_ABOUT_US_PAGE)
-        }
-        break
-      case URL_ABOUT_US_PAGE:
-        if(goToPrev) {
-          this.history.push(URL_TITLE_PAGE)
-        } else {
-          this.history.push(URL_LIVE_CODING_PAGE)
-        }
-        break
-      case URL_LIVE_CODING_PAGE:
-        if(goToPrev) {
-          this.history.push(URL_ABOUT_US_PAGE)
-        }
-        else {
-          this.history.push(URL_END_PAGE)
-        }
-        break
-      case URL_END_PAGE:
-        if(goToPrev) {
-          this.history.push(URL_LIVE_CODING_PAGE)
-        }
-        break
-      // for URL_WAITING_PAGE 
-      default: 
-        if(!goToPrev) {
-          this.history.push(URL_TITLE_PAGE)
-        }
+    if(!!NAVIGATION[currentPage][nextPage]) {
+      this.history.push(NAVIGATION[currentPage][nextPage])
     }
   }
 
@@ -104,16 +74,6 @@ class App extends Component {
 
     return (
       <Fragment>
-        {/* <Header>
-          <Image src={logo} mode="rotate" alt="logo" />
-          <Link
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Paragraph mb="0px" mt="0px">Learn React</Paragraph>
-          </Link>
-        </Header> */}
         <Router history={this.history}>
           <Switch>
             <Route exact path="/" render={this.renderRoot} />
@@ -137,7 +97,6 @@ class App extends Component {
               path={URL_END_PAGE}
               component={this.renderEnd}
             />
-            {/* <NotFoundRoute /> */}
           </Switch>
         </Router>
         <Image

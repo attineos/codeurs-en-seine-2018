@@ -3,7 +3,6 @@ import styled from 'styled-components'
 const SubTitle = styled.h2`
   font-weight: 400;
   text-align: center;
-  // font-style: italic;
 	font-size: 35px;
   line-height: 70px;
   font-family: 'Oswald', sans-serif;

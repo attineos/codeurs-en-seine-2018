@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const Title = styled.h1`
   font-weight: 400;
   text-align: center;
-  font-size: 70px; // 51px;
+  font-size: 70px;
   line-height: 70px;
   font-family: 'Oswald', sans-serif;
   margin-top: ${({ mt }) => mt || '0px'};
