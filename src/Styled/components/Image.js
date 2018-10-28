@@ -10,8 +10,11 @@ const rotate360 = keyframes`
 `;
 
 const Image = styled.img`
-  animation: ${rotate360} infinite ${({ speed }) => speed} linear;
-  height: ${({ h }) => h || '8vmin'};
+  animation: ${({ mode }) => mode === "rotate" && rotate360} infinite ${({ speed }) => speed} linear;
+  height: ${({ h }) => h || '4vmin'};
+  margin-top: ${({ mt }) => mt || null};
+  margin-bottom: ${({ mb }) => mb || null};
+  background-color:${({ bgC }) => bgC || null};
 `
 
 Image.defaultProps = {

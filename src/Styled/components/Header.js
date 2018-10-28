@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const Paragraph = styled.header`
   background-color: #282c34;
-  min-height: 10vh;
+  min-height: 4vh;
   display: flex;
   flex-direction: column;
   align-items: center;

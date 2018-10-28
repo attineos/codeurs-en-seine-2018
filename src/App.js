@@ -1,58 +1,116 @@
 import React, { Component, Fragment } from 'react'
-import logo from './logo.svg'
 
 import {
-  Route,
-  BrowserRouter,
+  Router,
   Redirect,
+  Route,
   Switch,
 } from 'react-router-dom'
 
-import { Header, Image, Link } from './Styled/components'
+import createBrowserHistory from "history/createBrowserHistory"
 
-import { LiveCodingPage, TitlePage } from './Styled/pages'
+import {
+  LINK_NEXT_PAGE_NAME_ATTR,
+  LINK_PREVIOUS_PAGE_NAME_ATTR,
+  NAVIGATION,
+  URL_ABOUT_US_PAGE,
+  URL_END_PAGE,
+  URL_LIVE_CODING_PAGE,
+  URL_TITLE_PAGE,
+  URL_WAITING_PAGE,
+} from './Styled/config'
+
+import { AboutUsPage, LiveCodingPage, SummaryPage, TitlePage } from './Styled/pages'
+
+import { Image } from './Styled/components'
+
+import {
+  arrowLeft,
+  arrowRight,
+} from './images'
+
+const nextStyle = {position: 'absolute', bottom: '25px', right: '25px' }
+const prevStyle = {position: 'absolute', bottom: '25px', left: '25px' }
 
 class App extends Component {
 
-  renderRoot() {
-    return <Redirect to="/title" />
+  history = createBrowserHistory()
+
+  handleChangePage = (e) => {
+    const nextPage = LINK_PREVIOUS_PAGE_NAME_ATTR === e.currentTarget.name ? 'prev' : 'next'
+
+    const currentPage = document.location.pathname
+
+    if(!!NAVIGATION[currentPage][nextPage]) {
+      this.history.push(NAVIGATION[currentPage][nextPage])
+    }
   }
 
-  renderLiveCoding() {
+  renderRoot () {
+    return <Redirect to={URL_WAITING_PAGE} />
+  }
+
+  renderAboutUs () {
+    return <AboutUsPage />
+  }
+
+  renderLiveCoding () {
     return <LiveCodingPage />
   }
 
-  renderTitle() {
+  renderEnd () {
+    return <SummaryPage color="black" /> 
+  }
+
+  renderTitle () {
     return <TitlePage />
   }
 
+  renderWaitingTitle () {
+    return <SummaryPage color="blue" /> 
+  }
+
   render() {
+
     return (
       <Fragment>
-        <Header>
-          <Image src={logo} mode="rotate" alt="logo" />
-          <Link
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </Link>
-        </Header>
-        <BrowserRouter>
+        <Router history={this.history}>
           <Switch>
             <Route exact path="/" render={this.renderRoot} />
             <Route
-              path="/title"
+              path={URL_WAITING_PAGE}
+              component={this.renderWaitingTitle}
+            />
+            <Route
+              path={URL_TITLE_PAGE}
               component={this.renderTitle}
             />
             <Route
-              path="/live-coding"
+              path={URL_ABOUT_US_PAGE}
+              component={this.renderAboutUs}
+            />
+            <Route
+              path={URL_LIVE_CODING_PAGE}
               component={this.renderLiveCoding}
             />
-            {/* <NotFoundRoute /> */}
+            <Route
+              path={URL_END_PAGE}
+              component={this.renderEnd}
+            />
           </Switch>
-        </BrowserRouter>
+        </Router>
+        <Image
+          src={arrowLeft}
+          name={LINK_PREVIOUS_PAGE_NAME_ATTR}
+          style={prevStyle}
+          onClick={this.handleChangePage}
+        />
+        <Image
+          src={arrowRight}
+          name={LINK_NEXT_PAGE_NAME_ATTR}
+          style={nextStyle}
+          onClick={this.handleChangePage}
+        />
       </Fragment>
     );
   }
