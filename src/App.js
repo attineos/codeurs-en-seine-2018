@@ -17,6 +17,7 @@ import {
   URL_ABOUT_US_PAGE,
   URL_END_PAGE,
   URL_LIVE_CODING_PAGE,
+  URL_USEFUL_LINKS_PAGE,
   URL_TITLE_PAGE,
   URL_WAITING_PAGE,
 } from './config'
@@ -35,7 +36,8 @@ import {
   LiveCodingPage,
   NotFoundPage,
   SummaryPage,
-  TitlePage
+  TitlePage,
+  UsefulLinks
 } from './pages'
 
 const nextStyle = {position: 'absolute', bottom: '25px', right: '25px' }
@@ -71,6 +73,10 @@ class App extends Component {
     return <SummaryPage color="black" /> 
   }
 
+  renderUsefulLinks () {
+    return <UsefulLinks />
+  }
+
   renderTitle () {
     return <TitlePage />
   }
@@ -102,6 +108,10 @@ class App extends Component {
               <Route
                 path={URL_LIVE_CODING_PAGE}
                 component={this.renderLiveCoding}
+              />
+              <Route
+                path={URL_USEFUL_LINKS_PAGE}
+                component={this.renderUsefulLinks}
               />
               <Route
                 path={URL_END_PAGE}
