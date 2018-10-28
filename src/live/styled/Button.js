@@ -25,9 +25,20 @@ Icon.defaultProps = {
 
 
 const Button = styled.button.attrs({children:props => <Icon speed={props.speed} />})`
-  color: white;
-  font-size: 50px;
-  background: blue;
-  padding: 50px;
+  color: ${({theme, mode}) => theme.components.button[mode].color};
+  font-size: ${({theme}) => theme.fonts.fontSize.fs51};
+  background: ${({theme, mode}) => theme.components.button[mode].background};
+  padding: ${({theme}) => theme.spaces.s10};
+  max-width: 500px;
+  
+  &:hover {
+    background: ${({theme, mode}) => theme.components.button[mode].backgroundHover};
+  }
+
 `
-export default Button;
+
+Button.defaultProps = {
+  mode: "primary",
+}
+
+export default Button

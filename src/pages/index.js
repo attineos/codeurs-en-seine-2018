@@ -1,5 +1,5 @@
 import AboutUsPage from './AboutUsPage'
-import LiveCodingPage from './LiveCodingPage'
+import LiveCodingPage from '../live'
 import SummaryPage from './SummaryPage'
 import TitlePage from './TitlePage'
 

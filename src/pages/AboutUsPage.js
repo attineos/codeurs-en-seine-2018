@@ -7,7 +7,7 @@ import {
   attineosLogo,
   mailjetLogo,
   photo,
-} from '../../images'
+} from '../images'
 
 class AboutUsPage extends Component {
 

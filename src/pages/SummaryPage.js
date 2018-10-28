@@ -5,13 +5,13 @@ import { ContainerFlex, Image, SubTitle, Title } from '../components'
 
 import {
   codeursEnSeineLogoWhite,
-} from '../../images'
+} from '../images'
 
-class TitleSection extends Component {
+class SummaryPage extends Component {
 
   render() {
 
-    return (<ContainerFlex fd="column" bc="blue" onClick={this.goPrev}>
+    return (<ContainerFlex fd="column" bc={this.props.color} onClick={this.goPrev}>
       <ContainerFlex h="80%" fd="column" jc="center" ai="center">
         <Title mb="35px">Style(d) et React, même Compo</Title>
         <SubTitle>Marion DEVEAUX</SubTitle>
@@ -25,4 +25,4 @@ class TitleSection extends Component {
   }
 }
 
-export default TitleSection
+export default SummaryPage

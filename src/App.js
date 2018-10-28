@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import {ThemeProvider} from 'styled-components'
 
 import {
   Router,
@@ -18,11 +19,12 @@ import {
   URL_LIVE_CODING_PAGE,
   URL_TITLE_PAGE,
   URL_WAITING_PAGE,
-} from './Styled/config'
+} from './config'
 
-import { AboutUsPage, LiveCodingPage, SummaryPage, TitlePage } from './Styled/pages'
+import { AboutUsPage, LiveCodingPage, SummaryPage, TitlePage } from './pages'
+import theme from './theme';
 
-import { Image } from './Styled/components'
+import { Image } from './components'
 
 import {
   arrowLeft,
@@ -73,45 +75,47 @@ class App extends Component {
   render() {
 
     return (
-      <Fragment>
-        <Router history={this.history}>
-          <Switch>
-            <Route exact path="/" render={this.renderRoot} />
-            <Route
-              path={URL_WAITING_PAGE}
-              component={this.renderWaitingTitle}
-            />
-            <Route
-              path={URL_TITLE_PAGE}
-              component={this.renderTitle}
-            />
-            <Route
-              path={URL_ABOUT_US_PAGE}
-              component={this.renderAboutUs}
-            />
-            <Route
-              path={URL_LIVE_CODING_PAGE}
-              component={this.renderLiveCoding}
-            />
-            <Route
-              path={URL_END_PAGE}
-              component={this.renderEnd}
-            />
-          </Switch>
-        </Router>
-        <Image
-          src={arrowLeft}
-          name={LINK_PREVIOUS_PAGE_NAME_ATTR}
-          style={prevStyle}
-          onClick={this.handleChangePage}
-        />
-        <Image
-          src={arrowRight}
-          name={LINK_NEXT_PAGE_NAME_ATTR}
-          style={nextStyle}
-          onClick={this.handleChangePage}
-        />
-      </Fragment>
+      <ThemeProvider theme={theme} >
+        <Fragment>
+          <Router history={this.history}>
+            <Switch>
+              <Route exact path="/" render={this.renderRoot} />
+              <Route
+                path={URL_WAITING_PAGE}
+                component={this.renderWaitingTitle}
+              />
+              <Route
+                path={URL_TITLE_PAGE}
+                component={this.renderTitle}
+              />
+              <Route
+                path={URL_ABOUT_US_PAGE}
+                component={this.renderAboutUs}
+              />
+              <Route
+                path={URL_LIVE_CODING_PAGE}
+                component={this.renderLiveCoding}
+              />
+              <Route
+                path={URL_END_PAGE}
+                component={this.renderEnd}
+              />
+            </Switch>
+          </Router>
+          <Image
+            src={arrowLeft}
+            name={LINK_PREVIOUS_PAGE_NAME_ATTR}
+            style={prevStyle}
+            onClick={this.handleChangePage}
+          />
+          <Image
+            src={arrowRight}
+            name={LINK_NEXT_PAGE_NAME_ATTR}
+            style={nextStyle}
+            onClick={this.handleChangePage}
+          />
+        </Fragment>
+      </ThemeProvider>
     );
   }
 }
