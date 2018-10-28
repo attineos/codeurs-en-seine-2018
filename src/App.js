@@ -21,15 +21,22 @@ import {
   URL_WAITING_PAGE,
 } from './config'
 
-import { AboutUsPage, LiveCodingPage, SummaryPage, TitlePage } from './pages'
-import theme from './theme';
-
-import { Image } from './components'
+import theme from './theme'
 
 import {
-  arrowLeft,
-  arrowRight,
+  ArrowLeft,
+  ArrowRight,
 } from './images'
+
+import Image from './components/Image'
+
+import {
+  AboutUsPage,
+  LiveCodingPage,
+  NotFoundPage,
+  SummaryPage,
+  TitlePage
+} from './pages'
 
 const nextStyle = {position: 'absolute', bottom: '25px', right: '25px' }
 const prevStyle = {position: 'absolute', bottom: '25px', left: '25px' }
@@ -100,16 +107,19 @@ class App extends Component {
                 path={URL_END_PAGE}
                 component={this.renderEnd}
               />
+              <NotFoundPage />
             </Switch>
           </Router>
           <Image
-            src={arrowLeft}
+            width="50px"
+            src={ArrowLeft}
             name={LINK_PREVIOUS_PAGE_NAME_ATTR}
             style={prevStyle}
             onClick={this.handleChangePage}
           />
           <Image
-            src={arrowRight}
+            width="50px"
+            src={ArrowRight}
             name={LINK_NEXT_PAGE_NAME_ATTR}
             style={nextStyle}
             onClick={this.handleChangePage}

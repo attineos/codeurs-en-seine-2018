@@ -1,25 +1,41 @@
-import arrowLeft from './left-arrow.svg'
-import arrowRight from './right-arrow.svg'
-import attineosLogo from './attineos.png'
-import codeursEnSeineLogo from './ces.png'
-import codeursEnSeineLogoWhite from './ces_white.png'
-import mailjetLogo from './mailjet.png'
-import photo from './final.png'
-import kindarenaLogo from './kindarena.png'
-import kindarenaLogoLong from './kindarena_long.png'
-import reactLogo from './React.js_logo.png'
-import styledCompoLogo from './styled-components.png'
+
+import AttineosLogo from './png/attineos.png'
+import CodeursEnSeineLogo from './png/ces.png'
+import CodeursEnSeineLogoWhite from './png/ces_white.png'
+import KindarenaLogo from './png/kindarena.png'
+import KindarenaLogoLong from './png/kindarena_long.png'
+import MailjetLogo from './png/mailjet.png'
+import Photo from './png/final.png'
+import ReactLogo from './png/React.js_logo.png'
+import StyledCompoLogo from './png/styled-components.png'
+
+import AlienSvg from './svg/alien.svg'
+import ArrowLeft from './svg/left-arrow.svg'
+import ArrowRight from './svg/right-arrow.svg'
+import AstronautSvg from './svg/astronaut.svg'
+import JupiterSvg from './svg/jupiter.svg'
+import MarsPlanetSvg from './svg/mars.svg'
+import EarthSvg from './svg/planet-earth.svg'
+import RocketSvg from './svg/rocket.svg'
+import SaturnSvg from './svg/saturn.svg'
 
 export {
-  arrowLeft,
-  arrowRight,
-  attineosLogo,
-  codeursEnSeineLogo,
-  codeursEnSeineLogoWhite,
-  mailjetLogo,
-  photo,
-  kindarenaLogo,
-  kindarenaLogoLong,
-  reactLogo,
-  styledCompoLogo,
+  AlienSvg,
+  ArrowLeft,
+  ArrowRight,
+  AstronautSvg,
+  AttineosLogo,
+  CodeursEnSeineLogo,
+  CodeursEnSeineLogoWhite,
+  EarthSvg,
+  JupiterSvg,
+  KindarenaLogo,
+  KindarenaLogoLong,
+  MailjetLogo,
+  MarsPlanetSvg,
+  Photo,
+  ReactLogo,
+  RocketSvg,
+  SaturnSvg,
+  StyledCompoLogo,
 }

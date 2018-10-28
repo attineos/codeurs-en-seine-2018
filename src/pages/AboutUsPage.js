@@ -4,9 +4,9 @@ import React, { Component } from 'react'
 import { ContainerFlex, Image, Paragraph, SubTitle, Title } from '../components'
 
 import {
-  attineosLogo,
-  mailjetLogo,
-  photo,
+  AttineosLogo,
+  MailjetLogo,
+  Photo,
 } from '../images'
 
 class AboutUsPage extends Component {
@@ -26,10 +26,10 @@ class AboutUsPage extends Component {
           </ContainerFlex>
         </ContainerFlex>
         <ContainerFlex fd="column" jc="center" ai="center">
-          <Image src={photo} h="85%" w="90%" alt="logo react et styled-components" />
+          <Image src={Photo} h="85%" alt="logo react et styled-components" />
       <ContainerFlex mt="25px" jc="space-around">
-          <Image bgC="white" src={attineosLogo} h="80px" alt="logo react et styled-components" />
-          <Image bgC="white" src={mailjetLogo} h="100px" alt="logo react et styled-components" />
+          <Image bgC="white" src={AttineosLogo} h="80px" alt="logo react et styled-components" />
+          <Image bgC="white" src={MailjetLogo} h="100px" alt="logo react et styled-components" />
         </ContainerFlex>
         </ContainerFlex>
         <ContainerFlex fd="column" bc="blue" onClick={this.goPrev}>

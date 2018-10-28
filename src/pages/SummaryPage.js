@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import { ContainerFlex, Image, SubTitle, Title } from '../components'
 
 import {
-  codeursEnSeineLogoWhite,
+  CodeursEnSeineLogoWhite,
 } from '../images'
 
 class SummaryPage extends Component {
@@ -18,7 +18,7 @@ class SummaryPage extends Component {
         <SubTitle>Valentin DESPORTES</SubTitle>
       </ContainerFlex>
       <ContainerFlex h="20%" jc="space-around" ai="flex-end">
-        <Image src={codeursEnSeineLogoWhite} h="200px" mb="75px" alt="logo react et styled-components" />
+        <Image src={CodeursEnSeineLogoWhite} h="200px" mb="75px" alt="logo react et styled-components" />
       </ContainerFlex>
     </ContainerFlex>
     )
