@@ -16,6 +16,7 @@ import {
   NAVIGATION,
   URL_ABOUT_US_PAGE,
   URL_END_PAGE,
+  URL_QUESTION_PAGE,
   URL_LIVE_CODING_PAGE,
   URL_USEFUL_LINKS_PAGE,
   URL_TITLE_PAGE,
@@ -35,9 +36,10 @@ import {
   AboutUsPage,
   LiveCodingPage,
   NotFoundPage,
+  QuestionPage,
   SummaryPage,
   TitlePage,
-  UsefulLinks
+  UsefulLinks,
 } from './pages'
 
 const nextStyle = {position: 'absolute', bottom: '25px', right: '25px' }
@@ -71,6 +73,10 @@ class App extends Component {
 
   renderEnd () {
     return <SummaryPage color="black" /> 
+  }
+
+  renderQuestion () {
+    return <QuestionPage color="black" /> 
   }
 
   renderUsefulLinks () {
@@ -112,6 +118,10 @@ class App extends Component {
               <Route
                 path={URL_USEFUL_LINKS_PAGE}
                 component={this.renderUsefulLinks}
+              />
+              <Route
+                path={URL_QUESTION_PAGE}
+                component={this.renderQuestion}
               />
               <Route
                 path={URL_END_PAGE}

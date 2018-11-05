@@ -50,7 +50,7 @@ class UsefulLinks extends Component {
   render() {
     return (
       <ContainerFlex fd="column">
-        <Title col="black">Liens Utiles</Title>
+        <Title mt="25px" col="black">Liens Utiles</Title>
         <List>
           {this.renderLi()}
         </List>

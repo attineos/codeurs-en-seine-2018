@@ -21,6 +21,8 @@ import EarthSvg from './svg/planet-earth.svg'
 import RocketSvg from './svg/rocket.svg'
 import SaturnSvg from './svg/saturn.svg'
 
+import IdeaJpg from './jpg/idea.jpg'
+
 export {
   AlienSvg,
   ArrowLeft,
@@ -31,6 +33,7 @@ export {
   CodeursEnSeineLogoWhite,
   EarthSvg,
   GithubLogo,
+  IdeaJpg,
   JupiterSvg,
   KindarenaLogo,
   KindarenaLogoLong,

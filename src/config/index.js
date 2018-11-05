@@ -1,5 +1,6 @@
 const URL_ABOUT_US_PAGE = '/about-us'
 const URL_END_PAGE = '/end'
+const URL_QUESTION_PAGE = '/question'
 const URL_LIVE_CODING_PAGE = '/live-coding'
 const URL_USEFUL_LINKS_PAGE = '/links'
 const URL_TITLE_PAGE = '/title'
@@ -26,10 +27,14 @@ const NAVIGATION = {
   },
   [URL_USEFUL_LINKS_PAGE]: {
     prev: URL_LIVE_CODING_PAGE,
+    next: URL_QUESTION_PAGE,
+  },
+  [URL_QUESTION_PAGE]: {
+    prev: URL_USEFUL_LINKS_PAGE,
     next: URL_END_PAGE,
   },
   [URL_END_PAGE]: {
-    prev: URL_USEFUL_LINKS_PAGE,
+    prev: URL_QUESTION_PAGE,
   }
 }
 
@@ -39,6 +44,7 @@ export {
   NAVIGATION,
   URL_ABOUT_US_PAGE,
   URL_END_PAGE,
+  URL_QUESTION_PAGE,
   URL_LIVE_CODING_PAGE,
   URL_USEFUL_LINKS_PAGE,
   URL_TITLE_PAGE,

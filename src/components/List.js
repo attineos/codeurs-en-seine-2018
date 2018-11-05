@@ -9,11 +9,8 @@ const List = styled.ul`
   flex-direction: column;
   height: 100%;
   margin-bottom: 0;
-
-  li {
-    height: 100%;
-    padding: 25px 50px;
-  }
+  justify-content: center;
+  margin: 0;
 
   li:nth-child(2n) {
     background-color: blue;
