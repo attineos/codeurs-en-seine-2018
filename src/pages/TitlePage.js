@@ -2,17 +2,10 @@ import React, { Component } from 'react'
 
 import { ContainerFlex, Image, Paragraph, TitleSection } from '../components'
 
-import {
-  AttineosLogo,
-  KindarenaLogoLong,
-  ReactLogo,
-  StyledCompoLogo,
-} from '../images'
+import { AttineosLogo, KindarenaLogoLong, ReactLogo, StyledCompoLogo } from '../images'
 
 class TitlePage extends Component {
-
   render() {
-
     return (
       <ContainerFlex>
         <TitleSection />
@@ -22,9 +15,13 @@ class TitlePage extends Component {
               <Image src={ReactLogo} h="150px" alt="logo reactjs" />
               <Image src={StyledCompoLogo} h="100px" mb="20px" alt="logo styled-components" />
             </ContainerFlex>
-            <ContainerFlex jc="space-around" ai="flex-start" h='auto'>
-              <Paragraph mt="25px" col="blue">Reactjs : HTML in JS</Paragraph>
-              <Paragraph mt="25px" col="blue">Styled-components : CSS in JS</Paragraph>
+            <ContainerFlex jc="space-around" ai="flex-start" h="auto">
+              <Paragraph mt="25px" col="blue">
+                Reactjs : HTML in JS
+              </Paragraph>
+              <Paragraph mt="25px" col="blue">
+                Styled-components : CSS in JS
+              </Paragraph>
             </ContainerFlex>
           </ContainerFlex>
           <ContainerFlex fd="column" jc="flex-end" ai="center">

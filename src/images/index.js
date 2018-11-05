@@ -1,4 +1,3 @@
-
 import AttineosLogo from './png/attineos.png'
 import CodeursEnSeineLogo from './png/ces.png'
 import CodeursEnSeineLogoWhite from './png/ces_white.png'

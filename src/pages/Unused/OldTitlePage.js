@@ -2,14 +2,10 @@ import React, { Component } from 'react'
 
 import { ContainerFlex, Image, TitleSection } from '../../components'
 
-import {
-  photo,
-} from '../../../images'
+import { photo } from '../../../images'
 
 class TitlePage extends Component {
-
   render() {
-
     return (
       <ContainerFlex>
         <TitleSection />

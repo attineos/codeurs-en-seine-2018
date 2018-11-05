@@ -7,13 +7,4 @@ import SubTitle from './SubTitle'
 import Title from './Title'
 import TitleSection from './TitleSection'
 
-export {
-  ContainerFlex,
-  Header,
-  Image,
-  Link,
-  Paragraph,
-  SubTitle,
-  Title,
-  TitleSection,
-}
+export { ContainerFlex, Header, Image, Link, Paragraph, SubTitle, Title, TitleSection }

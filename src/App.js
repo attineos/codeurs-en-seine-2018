@@ -1,14 +1,9 @@
 import React, { Component, Fragment } from 'react'
-import {ThemeProvider} from 'styled-components'
+import { ThemeProvider } from 'styled-components'
 
-import {
-  Router,
-  Redirect,
-  Route,
-  Switch,
-} from 'react-router-dom'
+import { Router, Redirect, Route, Switch } from 'react-router-dom'
 
-import createBrowserHistory from "history/createBrowserHistory"
+import createBrowserHistory from 'history/createBrowserHistory'
 
 import {
   LINK_NEXT_PAGE_NAME_ATTR,
@@ -23,90 +18,64 @@ import {
 
 import theme from './theme'
 
-import {
-  ArrowLeft,
-  ArrowRight,
-} from './images'
+import { ArrowLeft, ArrowRight } from './images'
 
 import Image from './components/Image'
 
-import {
-  AboutUsPage,
-  LiveCodingPage,
-  NotFoundPage,
-  SummaryPage,
-  TitlePage
-} from './pages'
+import { AboutUsPage, LiveCodingPage, NotFoundPage, SummaryPage, TitlePage } from './pages'
 
-const nextStyle = {position: 'absolute', bottom: '25px', right: '25px' }
-const prevStyle = {position: 'absolute', bottom: '25px', left: '25px' }
+const nextStyle = { position: 'absolute', bottom: '25px', right: '25px' }
+const prevStyle = { position: 'absolute', bottom: '25px', left: '25px' }
 
 class App extends Component {
-
   history = createBrowserHistory()
 
-  handleChangePage = (e) => {
+  handleChangePage = e => {
     const nextPage = LINK_PREVIOUS_PAGE_NAME_ATTR === e.currentTarget.name ? 'prev' : 'next'
 
     const currentPage = document.location.pathname
 
-    if(!!NAVIGATION[currentPage][nextPage]) {
+    if (!!NAVIGATION[currentPage][nextPage]) {
       this.history.push(NAVIGATION[currentPage][nextPage])
     }
   }
 
-  renderRoot () {
+  renderRoot() {
     return <Redirect to={URL_WAITING_PAGE} />
   }
 
-  renderAboutUs () {
+  renderAboutUs() {
     return <AboutUsPage />
   }
 
-  renderLiveCoding () {
+  renderLiveCoding() {
     return <LiveCodingPage />
   }
 
-  renderEnd () {
-    return <SummaryPage color="black" /> 
+  renderEnd() {
+    return <SummaryPage color="black" />
   }
 
-  renderTitle () {
+  renderTitle() {
     return <TitlePage />
   }
 
-  renderWaitingTitle () {
-    return <SummaryPage color="blue" /> 
+  renderWaitingTitle() {
+    return <SummaryPage color="blue" />
   }
 
   render() {
-
     return (
-      <ThemeProvider theme={theme} >
+      <ThemeProvider theme={theme}>
         <Fragment>
           <Router history={this.history}>
             <Switch>
               <Route exact path="/" render={this.renderRoot} />
-              <Route
-                path={URL_WAITING_PAGE}
-                component={this.renderWaitingTitle}
-              />
-              <Route
-                path={URL_TITLE_PAGE}
-                component={this.renderTitle}
-              />
-              <Route
-                path={URL_ABOUT_US_PAGE}
-                component={this.renderAboutUs}
-              />
-              <Route
-                path={URL_LIVE_CODING_PAGE}
-                component={this.renderLiveCoding}
-              />
-              <Route
-                path={URL_END_PAGE}
-                component={this.renderEnd}
-              />
+              <Route path={URL_WAITING_PAGE} component={this.renderWaitingTitle} />
+              <Route path={URL_TITLE_PAGE} component={this.renderTitle} />
+              <Route path={URL_ABOUT_US_PAGE} component={this.renderAboutUs} />
+              <Route path={URL_LIVE_CODING_PAGE} component={this.renderLiveCoding} />
+              <Route path={URL_END_PAGE} component={this.renderEnd} />
               <NotFoundPage />
             </Switch>
           </Router>
@@ -126,8 +95,8 @@ class App extends Component {
           />
         </Fragment>
       </ThemeProvider>
-    );
+    )
   }
 }
 
-export default App;
+export default App

@@ -4,10 +4,4 @@ import NotFoundPage from './NotFoundPage'
 import SummaryPage from './SummaryPage'
 import TitlePage from './TitlePage'
 
-export {
-  AboutUsPage,
-  LiveCodingPage,
-  NotFoundPage,
-  SummaryPage,
-  TitlePage,
-}
+export { AboutUsPage, LiveCodingPage, NotFoundPage, SummaryPage, TitlePage }

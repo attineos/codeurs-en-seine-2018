@@ -1,4 +1,4 @@
-import {default as c} from './colors'
+import { default as c } from './colors'
 
 const components = {
   header: {
@@ -7,7 +7,7 @@ const components = {
   },
   link: {
     color: c.turquoiseBlue,
-  }
+  },
 }
 
 export default components

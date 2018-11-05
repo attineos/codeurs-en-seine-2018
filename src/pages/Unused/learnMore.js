@@ -1,5 +1,5 @@
-
-{/* <Header>
+{
+  /* <Header>
     <Image src={logo} mode="rotate" alt="logo" />
     <Link
         href="https://reactjs.org"
@@ -8,4 +8,5 @@
     >
         <Paragraph mb="0px" mt="0px">Learn React</Paragraph>
     </Link>
-</Header> */}
+</Header> */
+}

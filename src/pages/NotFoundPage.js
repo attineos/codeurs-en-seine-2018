@@ -15,10 +15,9 @@ import { ContainerFlex, Title, Image } from '../components'
 const earthSize = 300
 const rocketSize = 100
 const astronautSize = 100
-const planetSize = "200px"
+const planetSize = '200px'
 
 class NotFoundPage extends Component {
-
   render() {
     const width = window.innerWidth
     const height = window.innerHeight
@@ -27,40 +26,19 @@ class NotFoundPage extends Component {
         <Image
           src={EarthSvg}
           position="absolute"
-          t={`${(height/2) - (earthSize/2)}px`}
-          l={`${(width/2) - (earthSize/2)}px`}
+          t={`${height / 2 - earthSize / 2}px`}
+          l={`${width / 2 - earthSize / 2}px`}
           w={`${earthSize}px`}
           alt="logo"
         />
-        <Image
-          src={MarsPlanetSvg}
-          position="absolute"
-          b="0"
-          l="0"
-          w={planetSize}
-          alt="logo"
-        />
-        <Image
-          src={JupiterSvg}
-          position="absolute"
-          b="0"
-          r="0"
-          w={planetSize}
-          alt="logo"
-        />
-        <Image
-          src={SaturnSvg}
-          position="absolute"
-          t="0"
-          l="0"
-          w={planetSize}
-          alt="logo"
-        />
+        <Image src={MarsPlanetSvg} position="absolute" b="0" l="0" w={planetSize} alt="logo" />
+        <Image src={JupiterSvg} position="absolute" b="0" r="0" w={planetSize} alt="logo" />
+        <Image src={SaturnSvg} position="absolute" t="0" l="0" w={planetSize} alt="logo" />
         <Image
           src={RocketSvg}
           position="absolute"
-          t={`${(height/2) - (rocketSize/2)}px`}
-          l={`${(width/2) - (rocketSize/2)}px`}
+          t={`${height / 2 - rocketSize / 2}px`}
+          l={`${width / 2 - rocketSize / 2}px`}
           w={`${rocketSize}px`}
           mode="spin"
           speed="10s"
@@ -69,8 +47,8 @@ class NotFoundPage extends Component {
         <Image
           src={AstronautSvg}
           position="absolute"
-          t={`${(height/3) - (astronautSize/2)}px`}
-          r={`${(width/3.5) - (astronautSize/2)}px`}
+          t={`${height / 3 - astronautSize / 2}px`}
+          r={`${width / 3.5 - astronautSize / 2}px`}
           mode="verticalFilp"
           w={`${astronautSize}px`}
           speed="10s"
