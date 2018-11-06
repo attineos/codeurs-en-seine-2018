@@ -2,8 +2,10 @@
 import AttineosLogo from './png/attineos.png'
 import CodeursEnSeineLogo from './png/ces.png'
 import CodeursEnSeineLogoWhite from './png/ces_white.png'
+import GithubLogo from './png/github.png'
 import KindarenaLogo from './png/kindarena.png'
 import KindarenaLogoLong from './png/kindarena_long.png'
+import LodashLogo from './png/lodash.png'
 import MailjetLogo from './png/mailjet.png'
 import Photo from './png/final.png'
 import ReactLogo from './png/React.js_logo.png'
@@ -19,6 +21,8 @@ import EarthSvg from './svg/planet-earth.svg'
 import RocketSvg from './svg/rocket.svg'
 import SaturnSvg from './svg/saturn.svg'
 
+import IdeaJpg from './jpg/idea.jpg'
+
 export {
   AlienSvg,
   ArrowLeft,
@@ -28,9 +32,12 @@ export {
   CodeursEnSeineLogo,
   CodeursEnSeineLogoWhite,
   EarthSvg,
+  GithubLogo,
+  IdeaJpg,
   JupiterSvg,
   KindarenaLogo,
   KindarenaLogoLong,
+  LodashLogo,
   MailjetLogo,
   MarsPlanetSvg,
   Photo,
