@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { ContainerFlex, Image, Paragraph, SubTitle, Title } from '../components'
+import { ContainerFlex, Image, Link, Paragraph, SubTitle, Title } from '../components'
 
 import { AttineosLogo, MailjetLogo, Photo } from '../images'
 
@@ -16,6 +16,8 @@ class AboutUsPage extends Component {
             <Paragraph>Styled-components</Paragraph>
             <Paragraph>Zend Framework 2</Paragraph>
             <Paragraph>Basketball</Paragraph>
+            <Link href="https://twitter.com/MarionDev0" target="_blank" rel="noopener norefer">Twitter : <b>@MarionDev0</b></Link>
+            <Link href="https://fr.linkedin.com/in/marion-deveaux-a70107a0" target="_blank" rel="noopener norefer">LinkedIn</Link>
           </ContainerFlex>
         </ContainerFlex>
         <ContainerFlex fd="column" jc="center" ai="center">
@@ -34,6 +36,7 @@ class AboutUsPage extends Component {
             <Paragraph>Styled-components</Paragraph>
             <Paragraph>NodeJS</Paragraph>
             <Paragraph>Overwatch</Paragraph>
+            <Link href="https://twitter.com/MarionDev0" target="_blank" rel="noopener norefer">Twitter : <b>@V4lulz</b></Link>
           </ContainerFlex>
         </ContainerFlex>
       </ContainerFlex>

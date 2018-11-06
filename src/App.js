@@ -11,7 +11,9 @@ import {
   NAVIGATION,
   URL_ABOUT_US_PAGE,
   URL_END_PAGE,
+  URL_QUESTION_PAGE,
   URL_LIVE_CODING_PAGE,
+  URL_USEFUL_LINKS_PAGE,
   URL_TITLE_PAGE,
   URL_WAITING_PAGE,
 } from './config'
@@ -22,7 +24,15 @@ import { ArrowLeft, ArrowRight } from './images'
 
 import Image from './components/Image'
 
-import { AboutUsPage, LiveCodingPage, NotFoundPage, SummaryPage, TitlePage } from './pages'
+import {
+  AboutUsPage,
+  LiveCodingPage,
+  NotFoundPage,
+  QuestionPage,
+  SummaryPage,
+  TitlePage,
+  UsefulLinks,
+} from './pages'
 
 const nextStyle = { position: 'absolute', bottom: '25px', right: '25px' }
 const prevStyle = { position: 'absolute', bottom: '25px', left: '25px' }
@@ -56,7 +66,15 @@ class App extends Component {
     return <SummaryPage color="black" />
   }
 
-  renderTitle() {
+  renderQuestion () {
+    return <QuestionPage color="black" /> 
+  }
+
+  renderUsefulLinks () {
+    return <UsefulLinks />
+  }
+
+  renderTitle () {
     return <TitlePage />
   }
 
@@ -71,11 +89,34 @@ class App extends Component {
           <Router history={this.history}>
             <Switch>
               <Route exact path="/" render={this.renderRoot} />
-              <Route path={URL_WAITING_PAGE} component={this.renderWaitingTitle} />
-              <Route path={URL_TITLE_PAGE} component={this.renderTitle} />
-              <Route path={URL_ABOUT_US_PAGE} component={this.renderAboutUs} />
-              <Route path={URL_LIVE_CODING_PAGE} component={this.renderLiveCoding} />
-              <Route path={URL_END_PAGE} component={this.renderEnd} />
+              <Route
+                path={URL_WAITING_PAGE}
+                component={this.renderWaitingTitle}
+              />
+              <Route
+                path={URL_TITLE_PAGE}
+                component={this.renderTitle}
+              />
+              <Route
+                path={URL_ABOUT_US_PAGE}
+                component={this.renderAboutUs}
+              />
+              <Route
+                path={URL_LIVE_CODING_PAGE}
+                component={this.renderLiveCoding}
+              />
+              <Route
+                path={URL_USEFUL_LINKS_PAGE}
+                component={this.renderUsefulLinks}
+              />
+              <Route
+                path={URL_QUESTION_PAGE}
+                component={this.renderQuestion}
+              />
+              <Route
+                path={URL_END_PAGE}
+                component={this.renderEnd}
+              />
               <NotFoundPage />
             </Switch>
           </Router>
