@@ -4,7 +4,7 @@ import './style.css'
 class ButtonCSS extends Component {
   render() {
     return (
-      <button className="Button" onClick={this.props.onClick}>
+      <button className="Button" type="button" onClick={this.props.onClick}>
         <p style={{ 'animation-duration': this.props.speed }}>Text</p>
       </button>
     )

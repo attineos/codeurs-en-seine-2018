@@ -11,13 +11,21 @@ class AboutUsPage extends Component {
         <ContainerFlex fd="column" bc="blue" onClick={this.goPrev}>
           <ContainerFlex h="80%" fd="column" jc="center" ai="center">
             <Title mb="35px">Marion DEVEAUX</Title>
-            <SubTitle>Ingénieure d'études et développement</SubTitle>
+            <SubTitle>Ingénieure d&apos;études et développement</SubTitle>
             <Paragraph>React</Paragraph>
             <Paragraph>Styled-components</Paragraph>
             <Paragraph>Zend Framework 2</Paragraph>
             <Paragraph>Basketball</Paragraph>
-            <Link href="https://twitter.com/MarionDev0" target="_blank" rel="noopener norefer">Twitter : <b>@MarionDev0</b></Link>
-            <Link href="https://fr.linkedin.com/in/marion-deveaux-a70107a0" target="_blank" rel="noopener norefer">LinkedIn</Link>
+            <Link href="https://twitter.com/MarionDev0" target="_blank" rel="noopener norefer">
+              Twitter : <b>@MarionDev0</b>
+            </Link>
+            <Link
+              href="https://fr.linkedin.com/in/marion-deveaux-a70107a0"
+              target="_blank"
+              rel="noopener norefer"
+            >
+              LinkedIn
+            </Link>
           </ContainerFlex>
         </ContainerFlex>
         <ContainerFlex fd="column" jc="center" ai="center">
@@ -30,13 +38,15 @@ class AboutUsPage extends Component {
         <ContainerFlex fd="column" bc="blue" onClick={this.goPrev}>
           <ContainerFlex h="80%" fd="column" jc="center" ai="center">
             <Title mb="35px">Valentin DESPORTES</Title>
-            <SubTitle>Ingénieur d'études et développement</SubTitle>
+            <SubTitle>Ingénieur d&apos;études et développement</SubTitle>
             <Paragraph>React</Paragraph>
             <Paragraph>React Native</Paragraph>
             <Paragraph>Styled-components</Paragraph>
             <Paragraph>NodeJS</Paragraph>
             <Paragraph>Overwatch</Paragraph>
-            <Link href="https://twitter.com/MarionDev0" target="_blank" rel="noopener norefer">Twitter : <b>@V4lulz</b></Link>
+            <Link href="https://twitter.com/MarionDev0" target="_blank" rel="noopener norefer">
+              Twitter : <b>@V4lulz</b>
+            </Link>
           </ContainerFlex>
         </ContainerFlex>
       </ContainerFlex>

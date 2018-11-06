@@ -35,7 +35,7 @@ const NAVIGATION = {
   },
   [URL_END_PAGE]: {
     prev: URL_QUESTION_PAGE,
-  }
+  },
 }
 
 export {

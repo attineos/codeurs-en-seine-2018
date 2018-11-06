@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
+import { ThemeProvider } from 'styled-components'
 import ButtonCSS from './css'
 import Container from './styled/Container'
 import Button from './styled/Button'
-import { ThemeProvider } from 'styled-components'
 import { cesTheme } from './themes'
 
 class LiveCodingPage extends Component {

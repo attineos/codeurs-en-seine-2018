@@ -10,8 +10,8 @@ const Title = styled.h1`
   margin-bottom: ${({ mb }) => mb || '0px'};
   margin-right: ${({ mr }) => mr || '0px'};
   margin-left: ${({ ml }) => ml || '0px'};
-  color: ${({ col }) => col || 'white'};
-  transform: ${({ flip }) => flip ? 'scale(-1, -1)' : null};
+  color: ${({ col }) => col || 'white'};
+  transform: ${({ flip }) => (flip ? 'scale(-1, -1)' : null)};
 `
 
 export default Title

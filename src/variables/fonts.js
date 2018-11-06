@@ -1,7 +1,7 @@
 const fonts = {
   fontFamily: {
-    oswald: "'Oswald', sans-serif",
-    lato: "'Lato', sans-serif",
+    oswald: 'Oswald, sans-serif',
+    lato: 'Lato, sans-serif',
   },
   fontSize: {
     fs25: '25px',

@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "codeurs_en_seine_2018",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,9 +12,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "lint": "eslint --cache src",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prettier": "prettier --write \"{.storybook,src,bin}/**/*.?(js|?(s)css|json)\""
+    "prettier": "prettier --write \"{src,bin}/**/*.?(js|?(s)css|json)\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -26,6 +27,11 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-flowtype": "^3.2.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
     "prettier": "1.14.3"
   }
 }

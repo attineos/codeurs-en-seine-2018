@@ -38,8 +38,6 @@ const nextStyle = { position: 'absolute', bottom: '25px', right: '25px' }
 const prevStyle = { position: 'absolute', bottom: '25px', left: '25px' }
 
 class App extends Component {
-  history = createBrowserHistory()
-
   handleChangePage = e => {
     const nextPage = LINK_PREVIOUS_PAGE_NAME_ATTR === e.currentTarget.name ? 'prev' : 'next'
 
@@ -49,6 +47,8 @@ class App extends Component {
       this.history.push(NAVIGATION[currentPage][nextPage])
     }
   }
+
+  history = createBrowserHistory()
 
   renderRoot() {
     return <Redirect to={URL_WAITING_PAGE} />
@@ -66,15 +66,15 @@ class App extends Component {
     return <SummaryPage color="black" />
   }
 
-  renderQuestion () {
-    return <QuestionPage color="black" /> 
+  renderQuestion() {
+    return <QuestionPage color="black" />
   }
 
-  renderUsefulLinks () {
+  renderUsefulLinks() {
     return <UsefulLinks />
   }
 
-  renderTitle () {
+  renderTitle() {
     return <TitlePage />
   }
 
@@ -89,34 +89,13 @@ class App extends Component {
           <Router history={this.history}>
             <Switch>
               <Route exact path="/" render={this.renderRoot} />
-              <Route
-                path={URL_WAITING_PAGE}
-                component={this.renderWaitingTitle}
-              />
-              <Route
-                path={URL_TITLE_PAGE}
-                component={this.renderTitle}
-              />
-              <Route
-                path={URL_ABOUT_US_PAGE}
-                component={this.renderAboutUs}
-              />
-              <Route
-                path={URL_LIVE_CODING_PAGE}
-                component={this.renderLiveCoding}
-              />
-              <Route
-                path={URL_USEFUL_LINKS_PAGE}
-                component={this.renderUsefulLinks}
-              />
-              <Route
-                path={URL_QUESTION_PAGE}
-                component={this.renderQuestion}
-              />
-              <Route
-                path={URL_END_PAGE}
-                component={this.renderEnd}
-              />
+              <Route path={URL_WAITING_PAGE} component={this.renderWaitingTitle} />
+              <Route path={URL_TITLE_PAGE} component={this.renderTitle} />
+              <Route path={URL_ABOUT_US_PAGE} component={this.renderAboutUs} />
+              <Route path={URL_LIVE_CODING_PAGE} component={this.renderLiveCoding} />
+              <Route path={URL_USEFUL_LINKS_PAGE} component={this.renderUsefulLinks} />
+              <Route path={URL_QUESTION_PAGE} component={this.renderQuestion} />
+              <Route path={URL_END_PAGE} component={this.renderEnd} />
               <NotFoundPage />
             </Switch>
           </Router>

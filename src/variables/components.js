@@ -1,4 +1,4 @@
-import { default as c } from './colors'
+import c from './colors'
 
 const components = {
   header: {

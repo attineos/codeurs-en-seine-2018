@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { ContainerFlex, Image, SubTitle, Title } from '../components'
+import { ContainerFlex, Image, SubTitle, Title } from '.'
 
 import { CodeursEnSeineLogoWhite } from '../images'
 
