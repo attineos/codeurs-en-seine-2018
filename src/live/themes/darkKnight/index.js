@@ -1,4 +1,4 @@
-import {colors as c} from '../../../variables'
+import { colors as c } from '../../../variables'
 
 const darkKnight = {
   components: {
@@ -12,12 +12,12 @@ const darkKnight = {
         color: c.white,
         background: c.transparent,
         backgroundHover: c.orange,
-      }
+      },
     },
     page: {
       background: c.black,
-    }
-  }
+    },
+  },
 }
 
 export default darkKnight

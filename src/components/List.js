@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const List = styled.ul`
   color: white;
   font-size: 35px;
-  font-family: ${({theme}) => theme.fonts.fontFamily.lato};
+  font-family: ${({ theme }) => theme.fonts.fontFamily.lato};
   padding: 0;
   display: flex;
   flex-direction: column;

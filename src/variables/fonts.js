@@ -1,12 +1,12 @@
 const fonts = {
   fontFamily: {
-    oswald: "'Oswald', sans-serif",
-    lato: "'Lato', sans-serif",
+    oswald: 'Oswald, sans-serif',
+    lato: 'Lato, sans-serif',
   },
   fontSize: {
-    fs25: "25px",
-    fs35: "35px",
-    fs70: "71px",
+    fs25: '25px',
+    fs35: '35px',
+    fs70: '71px',
   },
   fontWeight: {
     fw100: 100,
@@ -20,8 +20,8 @@ const fonts = {
     fw900: 900,
   },
   lineHeight: {
-    lh70: "70px"
-  }
+    lh70: '70px',
+  },
 }
 
 export default fonts

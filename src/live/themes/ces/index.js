@@ -1,4 +1,4 @@
-import {colors as c} from '../../../variables'
+import { colors as c } from '../../../variables'
 
 const cesTheme = {
   components: {
@@ -12,12 +12,12 @@ const cesTheme = {
         color: c.darkGrey,
         background: c.transparent,
         backgroundHover: c.lightGrey,
-      }
+      },
     },
     page: {
       background: c.white,
-    }
-  }
+    },
+  },
 }
 
 export default cesTheme

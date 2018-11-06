@@ -1,23 +1,21 @@
 import React, { Component } from 'react'
 
-import ButtonCSS from "./css"
-import Container from './styled/Container';
-import Button from './styled/Button';
-import { ThemeProvider } from 'styled-components';
-import {cesTheme} from './themes'
+import { ThemeProvider } from 'styled-components'
+import ButtonCSS from './css'
+import Container from './styled/Container'
+import Button from './styled/Button'
+import { cesTheme } from './themes'
 
 class LiveCodingPage extends Component {
-
   state = {
-    speed:"1s"
+    speed: '1s',
   }
 
   handleClick = () => {
     this.setState({
-      speed:"3s"
+      speed: '3s',
     })
   }
-
 
   render() {
     return (

@@ -3,17 +3,17 @@
 // - http://chir.ag/projects/name-that-color/
 
 const colors = {
-  bastille: "#282c34",
-  black: "#000000",
-  darkBlue: "#3385B6",
-  darkGrey : "#5E5E60",
-  lightGrey : "#C7C8CA",
-  orange: "#F7B20D",
-  red: "#E4301F",
-  lightBlue : "#5597AF",
+  bastille: '#282c34',
+  black: '#000000',
+  darkBlue: '#3385B6',
+  darkGrey: '#5E5E60',
+  lightGrey: '#C7C8CA',
+  orange: '#F7B20D',
+  red: '#E4301F',
+  lightBlue: '#5597AF',
   transparent: 'transparent',
-  turquoiseBlue: "#61dafb",
-  white: "#FFFFFF",
+  turquoiseBlue: '#61dafb',
+  white: '#FFFFFF',
 }
 
 export default colors

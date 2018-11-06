@@ -23,7 +23,8 @@ const alienAnimation = keyframes`
     transform: translate(0px, 0px) rotate(45deg);
   }
   50% {
-    transform: translate(${window.innerWidth - 150}px, ${window.innerHeight - 200}px) rotate(-45deg);
+    transform: translate(${window.innerWidth - 150}px, ${window.innerHeight -
+  200}px) rotate(-45deg);
   }
   75% {
     transform: translate(0px, ${window.innerHeight - 150}px) rotate(0deg);
@@ -43,20 +44,25 @@ const verticalFilp = keyframes`
 `
 
 function getAnimation(mode) {
-  switch(mode) {
-    case "rotate": return rotate360
-    case "spin": return translateAndRotate360
-    case "alien": return alienAnimation
-    case "verticalFilp": return verticalFilp
-    default: return null
+  switch (mode) {
+    case 'rotate':
+      return rotate360
+    case 'spin':
+      return translateAndRotate360
+    case 'alien':
+      return alienAnimation
+    case 'verticalFilp':
+      return verticalFilp
+    default:
+      return null
   }
 }
 
 const Image = styled.img`
   margin-top: ${({ mt }) => mt || null};
   margin-bottom: ${({ mb }) => mb || null};
-  background-color:${({ bgC }) => bgC || null};
-  position: ${({ position }) => position || null};
+  background-color: ${({ bgC }) => bgC || null};
+  position: ${({ position }) => position || null};
   top: ${({ t }) => t || null};
   left: ${({ l }) => l || null};
   right: ${({ r }) => r || null};
