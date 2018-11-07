@@ -22,7 +22,7 @@ import theme from './theme'
 
 import { ArrowLeft, ArrowRight } from './images'
 
-import Image from './components/Image'
+import Image from './styles/Image'
 
 import {
   AboutUsPage,
@@ -63,11 +63,11 @@ class App extends Component {
   }
 
   renderEnd() {
-    return <SummaryPage color="black" />
+    return <SummaryPage bc="black" />
   }
 
   renderQuestion() {
-    return <QuestionPage color="black" />
+    return <QuestionPage />
   }
 
   renderUsefulLinks() {
@@ -79,7 +79,7 @@ class App extends Component {
   }
 
   renderWaitingTitle() {
-    return <SummaryPage color="blue" />
+    return <SummaryPage bc="darkBlue" />
   }
 
   render() {

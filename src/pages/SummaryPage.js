@@ -1,24 +1,26 @@
 import React, { Component } from 'react'
 
-import { ContainerFlex, Image, SubTitle, Title } from '../components'
+import { ContainerFlex, Image, SubTitle, Title } from '../styles'
 
 import { CodeursEnSeineLogoWhite } from '../images'
 
 class SummaryPage extends Component {
   render() {
     return (
-      <ContainerFlex fd="column" bc={this.props.color} onClick={this.goPrev}>
-        <ContainerFlex h="80%" fd="column" jc="center" ai="center">
-          <Title mb="35px">Style(d) et React, même Compo</Title>
-          <SubTitle>Marion DEVEAUX</SubTitle>
+      <ContainerFlex fd="column" jc="center" bc={this.props.bc} onClick={this.goPrev}>
+        <ContainerFlex h="hp70" fd="column" jc="center" ai="center">
+          <Title>Style(d) et React, même Compo</Title>
+          <SubTitle mt="s0" mb="s0">
+            Marion DEVEAUX
+          </SubTitle>
           <SubTitle>Valentin DESPORTES</SubTitle>
         </ContainerFlex>
-        <ContainerFlex h="20%" jc="space-around" ai="flex-end">
+        <ContainerFlex h="hp30" jc="space-around" ai="flex-end">
           <Image
             src={CodeursEnSeineLogoWhite}
-            h="200px"
-            mb="75px"
-            alt="logo react et styled-components"
+            h="h200"
+            mb="s14"
+            alt="Codeurs en Seine logo white"
           />
         </ContainerFlex>
       </ContainerFlex>

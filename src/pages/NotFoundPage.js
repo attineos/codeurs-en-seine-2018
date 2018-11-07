@@ -10,7 +10,7 @@ import {
   RocketSvg,
 } from '../images'
 
-import { ContainerFlex, Title, Image } from '../components'
+import { ContainerFlex, Title, Image } from '../styles'
 
 const earthSize = 300
 const rocketSize = 100

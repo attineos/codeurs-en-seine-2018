@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import forEach from 'lodash/forEach'
 
-import { ContainerFlex, Image, Line, Link, List, Title, SubTitle } from '../components'
+import { ContainerFlex, Image, Line, Link, List, Title, SubTitle } from '../styles'
 
 import { GithubLogo, LodashLogo, ReactLogo, StyledCompoLogo } from '../images'
 
@@ -42,7 +42,7 @@ class UsefulLinks extends Component {
                 {link.link}
               </Link>
             )}
-            {link.icon && <Image src={link.icon} height="75px" />}
+            {link.icon && <Image src={link.icon} h="h75" />}
           </ContainerFlex>
         </Line>,
       )
@@ -54,7 +54,7 @@ class UsefulLinks extends Component {
   render() {
     return (
       <ContainerFlex fd="column">
-        <Title mt="25px" col="black">
+        <Title mb="s0" color="black">
           Liens Utiles
         </Title>
         <List>{this.renderLi()}</List>
