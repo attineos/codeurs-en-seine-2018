@@ -64,7 +64,7 @@ class NotFoundPage extends Component {
           speed="20s"
           alt="logo"
         />
-        <Title mt="s26">Huston nous avons un problème...</Title>
+        <Title mt="s26">Houston nous avons un problème...</Title>
         <Title mb="s30">La page recherchée est introuvable</Title>
       </ContainerFlex>
     )
