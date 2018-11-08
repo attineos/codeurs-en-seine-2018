@@ -10,12 +10,12 @@ import {
   RocketSvg,
 } from '../images'
 
-import { ContainerFlex, Title, Image } from '../components'
+import { ContainerFlex, Title, Image } from '../styles'
 
 const earthSize = 300
 const rocketSize = 100
 const astronautSize = 100
-const planetSize = '200px'
+const planetSize = 'w200'
 
 class NotFoundPage extends Component {
   render() {
@@ -28,7 +28,7 @@ class NotFoundPage extends Component {
           position="absolute"
           t={`${height / 2 - earthSize / 2}px`}
           l={`${width / 2 - earthSize / 2}px`}
-          w={`${earthSize}px`}
+          w="w300" // == earthSize
           alt="logo"
         />
         <Image src={MarsPlanetSvg} position="absolute" b="0" l="0" w={planetSize} alt="logo" />
@@ -39,7 +39,7 @@ class NotFoundPage extends Component {
           position="absolute"
           t={`${height / 2 - rocketSize / 2}px`}
           l={`${width / 2 - rocketSize / 2}px`}
-          w={`${rocketSize}px`}
+          w="w100" // == rocketSize
           mode="spin"
           speed="10s"
           alt="logo"
@@ -50,7 +50,7 @@ class NotFoundPage extends Component {
           t={`${height / 3 - astronautSize / 2}px`}
           r={`${width / 3.5 - astronautSize / 2}px`}
           mode="verticalFilp"
-          w={`${astronautSize}px`}
+          w="w100" // == astronautSize
           speed="10s"
           alt="logo"
         />
@@ -60,12 +60,12 @@ class NotFoundPage extends Component {
           t="50px"
           l="50px"
           mode="alien"
-          w="75px"
+          w="w75"
           speed="20s"
           alt="logo"
         />
-        <Title mt="100px">Huston nous avons un problème...</Title>
-        <Title mb="135px">La page recherchée est introuvable</Title>
+        <Title mt="s26">Houston nous avons un problème...</Title>
+        <Title mb="s30">La page recherchée est introuvable</Title>
       </ContainerFlex>
     )
   }

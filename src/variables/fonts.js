@@ -6,7 +6,7 @@ const fonts = {
   fontSize: {
     fs25: '25px',
     fs35: '35px',
-    fs70: '71px',
+    fs71: '71px',
   },
   fontWeight: {
     fw100: 100,
@@ -20,7 +20,7 @@ const fonts = {
     fw900: 900,
   },
   lineHeight: {
-    lh70: '70px',
+    lh50: '50px',
   },
 }
 

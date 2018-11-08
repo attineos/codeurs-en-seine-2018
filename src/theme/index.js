@@ -1,5 +1,5 @@
-import { colors, components, fonts, spaces } from '../variables'
+import { colors, components, fonts, sizes, spaces } from '../variables'
 
-const theme = { colors, components, fonts, spaces }
+const theme = { colors, components, fonts, sizes, spaces }
 
 export default theme

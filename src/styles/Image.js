@@ -59,16 +59,19 @@ function getAnimation(mode) {
 }
 
 const Image = styled.img`
-  margin-top: ${({ mt }) => mt || null};
-  margin-bottom: ${({ mb }) => mb || null};
-  background-color: ${({ bgC }) => bgC || null};
+  margin-top: ${({ mt, theme }) => theme.spaces[mt]};
+  margin-bottom: ${({ mb, theme }) => theme.spaces[mb]};
+
+  background-color: ${({ bc, theme }) => theme.colors[bc]};
+
   position: ${({ position }) => position || null};
   top: ${({ t }) => t || null};
   left: ${({ l }) => l || null};
   right: ${({ r }) => r || null};
   bottom: ${({ b }) => b || null};
-  width: ${({ w }) => w || null};
-  height: ${({ h }) => h || null};
+
+  width: ${({ w, theme }) => theme.sizes.width[w]};
+  height: ${({ h, theme }) => theme.sizes.height[h]};
 
   animation-name: ${({ mode }) => getAnimation(mode)};
   animation-duration: ${({ speed }) => speed};

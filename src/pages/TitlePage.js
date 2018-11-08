@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
-import { ContainerFlex, Image, Paragraph, TitleSection } from '../components'
+import TitleSection from '../components/TitleSection'
+import { ContainerFlex, Image, Paragraph } from '../styles'
 
 import { AttineosLogo, KindarenaLogoLong, ReactLogo, StyledCompoLogo } from '../images'
 
@@ -12,21 +13,21 @@ class TitlePage extends Component {
         <ContainerFlex fd="column" jc="center" ai="center">
           <ContainerFlex fd="column">
             <ContainerFlex jc="space-around" ai="flex-end">
-              <Image src={ReactLogo} h="150px" alt="logo reactjs" />
-              <Image src={StyledCompoLogo} h="100px" mb="20px" alt="logo styled-components" />
+              <Image src={ReactLogo} h="h150" alt="logo reactjs" />
+              <Image src={StyledCompoLogo} h="h100" mb="s7" alt="logo styled-components" />
             </ContainerFlex>
             <ContainerFlex jc="space-around" ai="flex-start" h="auto">
-              <Paragraph mt="25px" col="blue">
+              <Paragraph mt="s8" color="darkBlue">
                 Reactjs : HTML in JS
               </Paragraph>
-              <Paragraph mt="25px" col="blue">
+              <Paragraph mt="s8" color="darkBlue">
                 Styled-components : CSS in JS
               </Paragraph>
             </ContainerFlex>
           </ContainerFlex>
           <ContainerFlex fd="column" jc="flex-end" ai="center">
-            <Image src={KindarenaLogoLong} h="75px" mb="75px" alt="logo Kindarena" />
-            <Image src={AttineosLogo} h="50px" mb="75px" alt="logo Kindarena" />
+            <Image src={KindarenaLogoLong} h="h75" mb="s21" alt="logo Kindarena" />
+            <Image src={AttineosLogo} h="h50" mb="s21" alt="logo Kindarena" />
           </ContainerFlex>
         </ContainerFlex>
       </ContainerFlex>
