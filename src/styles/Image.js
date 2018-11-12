@@ -61,6 +61,8 @@ function getAnimation(mode) {
 const Image = styled.img`
   margin-top: ${({ mt, theme }) => theme.spaces[mt]};
   margin-bottom: ${({ mb, theme }) => theme.spaces[mb]};
+  margin-left: ${({ ml, theme }) => theme.spaces[ml]};
+  margin-right: ${({ mr, theme }) => theme.spaces[mr]};
 
   background-color: ${({ bc, theme }) => theme.colors[bc]};
 

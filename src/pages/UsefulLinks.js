@@ -2,11 +2,26 @@ import React, { Component } from 'react'
 
 import forEach from 'lodash/forEach'
 
-import { ContainerFlex, Image, Line, Link, List, Title, SubTitle } from '../styles'
+import {
+  AnimatedContainerFlex,
+  ContainerFlex,
+  Image,
+  Line,
+  Link,
+  List,
+  Title,
+  SubTitle,
+} from '../styles'
 
 import { GithubLogo, LodashLogo, ReactLogo, StyledCompoLogo } from '../images'
 
 const links = [
+  {
+    name: 'Notre présentation',
+    link: 'Notre future repo',
+    icon: ReactLogo,
+    icon2: StyledCompoLogo,
+  },
   {
     name: 'React',
     link: 'https://reactjs.org/',
@@ -42,7 +57,14 @@ class UsefulLinks extends Component {
                 {link.link}
               </Link>
             )}
-            {link.icon && <Image src={link.icon} h="h75" />}
+            {link.icon2 ? (
+              <div>
+                {link.icon && <Image src={link.icon} h="h50" />}
+                {link.icon2 && <Image src={link.icon2} h="h50" ml="s6" />}
+              </div>
+            ) : (
+              link.icon && <Image src={link.icon} h="h75" />
+            )}
           </ContainerFlex>
         </Line>,
       )
@@ -53,12 +75,12 @@ class UsefulLinks extends Component {
 
   render() {
     return (
-      <ContainerFlex fd="column">
+      <AnimatedContainerFlex fd="column">
         <Title mb="s0" color="black">
           Liens Utiles
         </Title>
         <List>{this.renderLi()}</List>
-      </ContainerFlex>
+      </AnimatedContainerFlex>
     )
   }
 }
