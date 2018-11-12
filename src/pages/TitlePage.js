@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 
 import TitleSection from '../components/TitleSection'
-import { ContainerFlex, Image, Paragraph } from '../styles'
+import { AnimatedContainerFlex, ContainerFlex, Image, Paragraph } from '../styles'
 
 import { AttineosLogo, KindarenaLogoLong, ReactLogo, StyledCompoLogo } from '../images'
 
 class TitlePage extends Component {
   render() {
     return (
-      <ContainerFlex>
+      <AnimatedContainerFlex>
         <TitleSection />
         <ContainerFlex fd="column" jc="center" ai="center">
           <ContainerFlex fd="column">
@@ -25,12 +25,12 @@ class TitlePage extends Component {
               </Paragraph>
             </ContainerFlex>
           </ContainerFlex>
-          <ContainerFlex fd="column" jc="flex-end" ai="center">
+          <ContainerFlex fd="column" jc="flex-end" ai="center" h="hp45">
             <Image src={KindarenaLogoLong} h="h75" mb="s21" alt="logo Kindarena" />
             <Image src={AttineosLogo} h="h50" mb="s21" alt="logo Kindarena" />
           </ContainerFlex>
         </ContainerFlex>
-      </ContainerFlex>
+      </AnimatedContainerFlex>
     )
   }
 }

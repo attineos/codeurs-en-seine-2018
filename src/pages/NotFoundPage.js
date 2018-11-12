@@ -10,7 +10,7 @@ import {
   RocketSvg,
 } from '../images'
 
-import { ContainerFlex, Title, Image } from '../styles'
+import { AnimatedContainerFlex, Title, Image } from '../styles'
 
 const earthSize = 300
 const rocketSize = 100
@@ -22,7 +22,7 @@ class NotFoundPage extends Component {
     const width = window.innerWidth
     const height = window.innerHeight
     return (
-      <ContainerFlex bc="black" fd="column" jc="space-between">
+      <AnimatedContainerFlex bc="black" fd="column" jc="space-between">
         <Image
           src={EarthSvg}
           position="absolute"
@@ -66,7 +66,7 @@ class NotFoundPage extends Component {
         />
         <Title mt="s26">Houston nous avons un problème...</Title>
         <Title mb="s30">La page recherchée est introuvable</Title>
-      </ContainerFlex>
+      </AnimatedContainerFlex>
     )
   }
 }

@@ -1,13 +1,22 @@
 import React, { Component } from 'react'
 
-import { ContainerFlex, Image, Link, Paragraph, StyledHr, SubTitle, Title } from '../styles'
+import {
+  AnimatedContainerFlex,
+  ContainerFlex,
+  Image,
+  Link,
+  Paragraph,
+  StyledHr,
+  SubTitle,
+  Title,
+} from '../styles'
 
 import { AttineosLogo, MailjetLogo, Photo } from '../images'
 
 class AboutUsPage extends Component {
   render() {
     return (
-      <ContainerFlex>
+      <AnimatedContainerFlex>
         <ContainerFlex fd="column" bc="darkBlue">
           <ContainerFlex fd="column" jc="center" ai="center">
             <Title>Marion DEVEAUX</Title>
@@ -53,7 +62,7 @@ class AboutUsPage extends Component {
             </Link>
           </ContainerFlex>
         </ContainerFlex>
-      </ContainerFlex>
+      </AnimatedContainerFlex>
     )
   }
 }

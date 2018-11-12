@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 
-import { ContainerFlex, Image, SubTitle, Title } from '../styles'
+import { AnimatedContainerFlex, ContainerFlex, Image, SubTitle, Title } from '../styles'
 
 import { CodeursEnSeineLogoWhite } from '../images'
 
 class SummaryPage extends Component {
   render() {
     return (
-      <ContainerFlex fd="column" jc="center" bc={this.props.bc} onClick={this.goPrev}>
+      <AnimatedContainerFlex fd="column" jc="center" bc={this.props.bc} onClick={this.goPrev}>
         <ContainerFlex h="hp70" fd="column" jc="center" ai="center">
           <Title>Style(d) et React, même Compo</Title>
           <SubTitle mt="s0" mb="s0">
@@ -23,7 +23,7 @@ class SummaryPage extends Component {
             alt="Codeurs en Seine logo white"
           />
         </ContainerFlex>
-      </ContainerFlex>
+      </AnimatedContainerFlex>
     )
   }
 }

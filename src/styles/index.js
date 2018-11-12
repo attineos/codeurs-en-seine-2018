@@ -1,3 +1,4 @@
+import AnimatedContainerFlex from './AnimatedContainerFlex'
 import ContainerFlex from './ContainerFlex'
 import Image from './Image'
 import Line from './Line'
@@ -8,4 +9,15 @@ import StyledHr from './StyledHr'
 import SubTitle from './SubTitle'
 import Title from './Title'
 
-export { ContainerFlex, Image, Line, Link, List, Paragraph, StyledHr, SubTitle, Title }
+export {
+  AnimatedContainerFlex,
+  ContainerFlex,
+  Image,
+  Line,
+  Link,
+  List,
+  Paragraph,
+  StyledHr,
+  SubTitle,
+  Title,
+}
