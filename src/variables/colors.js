@@ -1,18 +1,28 @@
-// If you have some trouble naming your hex color :
-// - https://www.beautycolorcode.com/3d85b8 (Replace 3d85b8 by your hex code)
-// - http://chir.ag/projects/name-that-color/
-
 const colors = {
   bastille: '#282c34',
   black: '#000000',
+  brightSun: '#ffdf32',
   darkBlue: '#3385B6',
   darkGrey: '#5E5E60',
-  lightGrey: '#C7C8CA',
-  orange: '#F7B20D',
-  red: '#E4301F',
+  darkOrange: 'darkOrange',
+  gold: '#FFD700',
+  green: '#32CD32',
   lightBlue: '#5597AF',
+  lightGreen: '#5ad75a',
+  lightGrey: '#C7C8CA',
+  lightOrange: '#f8c13d',
+  lightRed: '#e9594b',
+  lime: 'lime',
+  limeGreen: 'limeGreen',
+  orange: 'orange',
+  pizazz: '#FF8C00',
+  red: '#E4301F',
+  salmon: 'salmon',
+  sunGlow: '#ffb732',
+  sunShade: '#ffa332',
   transparent: 'transparent',
   turquoiseBlue: '#61dafb',
+  webOrange: '#FFA500',
   white: '#FFFFFF',
 }
 

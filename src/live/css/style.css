@@ -11,16 +11,35 @@
 .Button {
   color: white;
   font-size: 50px;
-  background: #3385b6;
-  padding: 50px;
+  padding: 25px;
 }
 
-.Button:hover {
-  background: #5597af;
+.Button[data-speed='1s'] {
+  background: salmon;
 }
 
-.Button p {
-  animation-name: rotateCss;
+.Button[data-speed='2s'] {
+  background: darkOrange;
+}
+
+.Button[data-speed='3s'] {
+  background: limeGreen;
+}
+
+.Button[data-speed='1s']:hover {
+  background: red;
+}
+
+.Button[data-speed='2s']:hover {
+  background: orange;
+}
+
+.Button[data-speed='3s']:hover {
+  background: lime;
+}
+
+.Button * {
   animation-iteration-count: infinite;
+  animation-name: rotateCss;
   animation-timing-function: linear;
 }

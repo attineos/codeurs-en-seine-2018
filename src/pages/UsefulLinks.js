@@ -9,19 +9,19 @@ import { GithubLogo, ReactLogo, StyledCompoLogo } from '../images'
 const links = [
   {
     name: 'Notre présentation',
-    link: 'Notre future repo',
+    link: 'Notre futur repo',
     icon: ReactLogo,
     icon2: StyledCompoLogo,
-  },
-  {
-    name: 'React',
-    link: 'https://reactjs.org/',
-    icon: ReactLogo,
   },
   {
     name: 'Styled-components',
     link: 'https://www.styled-components.com/',
     icon: StyledCompoLogo,
+  },
+  {
+    name: 'React',
+    link: 'https://reactjs.org/',
+    icon: ReactLogo,
   },
   {
     name: 'create-react-app',
@@ -43,7 +43,7 @@ class UsefulLinks extends Component {
           )}
           {link.link && (
             <Cell>
-              <Link href={link.link} target="_blank" rel="noopener noreferrer">
+              <Link big href={link.link} target="_blank" rel="noopener noreferrer">
                 {link.link}
               </Link>
             </Cell>

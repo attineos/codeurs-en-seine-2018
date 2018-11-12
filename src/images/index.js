@@ -14,6 +14,8 @@ import AlienSvg from './svg/alien.svg'
 import ArrowLeft from './svg/left-arrow.svg'
 import ArrowRight from './svg/right-arrow.svg'
 import AstronautSvg from './svg/astronaut.svg'
+import Batman from './svg/batman.svg'
+import CES from './svg/ces.svg'
 import JupiterSvg from './svg/jupiter.svg'
 import MarsPlanetSvg from './svg/mars.svg'
 import EarthSvg from './svg/planet-earth.svg'
@@ -28,6 +30,8 @@ export {
   ArrowRight,
   AstronautSvg,
   AttineosLogo,
+  Batman,
+  CES,
   CodeursEnSeineLogo,
   CodeursEnSeineLogoWhite,
   EarthSvg,

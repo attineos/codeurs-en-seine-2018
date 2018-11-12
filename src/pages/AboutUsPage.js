@@ -20,7 +20,7 @@ class AboutUsPage extends Component {
         <ContainerFlex fd="column" bc="darkBlue">
           <ContainerFlex fd="column" jc="center" ai="center">
             <Title>Marion DEVEAUX</Title>
-            <SubTitle>Ingénieure d&apos;études et développement</SubTitle>
+            <SubTitle>Ingénieure Études et développement</SubTitle>
             <StyledHr />
             <Paragraph>React</Paragraph>
             <Paragraph>Styled-components</Paragraph>
@@ -49,7 +49,7 @@ class AboutUsPage extends Component {
         <ContainerFlex fd="column" bc="darkBlue">
           <ContainerFlex fd="column" jc="center" ai="center">
             <Title>Valentin DESPORTES</Title>
-            <SubTitle>Ingénieur d&apos;études et développement</SubTitle>
+            <SubTitle>Ingénieur Études et développement</SubTitle>
             <StyledHr />
             <Paragraph>React</Paragraph>
             <Paragraph>React Native</Paragraph>

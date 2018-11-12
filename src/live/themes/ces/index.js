@@ -1,21 +1,29 @@
 import { colors as c } from '../../../variables'
+import { CES } from '../../../images'
 
 const cesTheme = {
   components: {
     button: {
-      primary: {
-        color: c.white,
-        background: c.darkBlue,
-        backgroundHover: c.lightBlue,
+      icon: CES,
+      color: c.white,
+      '1s': {
+        background: c.salmon,
+        backgroundHover: c.red,
       },
-      secondary: {
-        color: c.darkGrey,
-        background: c.transparent,
-        backgroundHover: c.lightGrey,
+      '2s': {
+        background: c.darkOrange,
+        backgroundHover: c.orange,
+      },
+      '3s': {
+        background: c.limeGreen,
+        backgroundHover: c.lime,
       },
     },
     page: {
       background: c.white,
+    },
+    text: {
+      color: c.darkBlue,
     },
   },
 }

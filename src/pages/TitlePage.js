@@ -9,7 +9,7 @@ class TitlePage extends Component {
   render() {
     return (
       <AnimatedContainerFlex>
-        <TitleSection />
+        <TitleSection bc="darkBlue" />
         <ContainerFlex fd="column" jc="center" ai="center">
           <ContainerFlex fd="column">
             <ContainerFlex jc="space-around" ai="flex-end">

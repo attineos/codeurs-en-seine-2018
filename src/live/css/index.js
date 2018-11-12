@@ -1,14 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './style.css'
 
-class ButtonCSS extends Component {
-  render() {
-    return (
-      <button className="Button" type="button" onClick={this.props.onClick}>
-        <p style={{ 'animation-duration': this.props.speed }}>Text</p>
-      </button>
-    )
-  }
-}
+const ButtonCSS = ({ onClick, speed }) => (
+  <button className="Button" type="button" onClick={onClick} data-speed={speed}>
+    <div style={{ animationDuration: speed }}>Text</div>
+  </button>
+)
 
 export default ButtonCSS
