@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import { ThemeProvider } from 'styled-components'
 
 import { Router, Redirect, Route, Switch } from 'react-router-dom'
@@ -6,8 +6,6 @@ import { Router, Redirect, Route, Switch } from 'react-router-dom'
 import createBrowserHistory from 'history/createBrowserHistory'
 
 import {
-  LINK_NEXT_PAGE_NAME_ATTR,
-  LINK_PREVIOUS_PAGE_NAME_ATTR,
   NAVIGATION,
   URL_ABOUT_US_PAGE,
   URL_END_PAGE,
@@ -20,10 +18,6 @@ import {
 
 import theme from './theme'
 
-import { ArrowLeft, ArrowRight } from './images'
-
-import Image from './styles/Image'
-
 import {
   AboutUsPage,
   LiveCodingPage,
@@ -34,17 +28,24 @@ import {
   UsefulLinks,
 } from './pages'
 
-const nextStyle = { position: 'absolute', bottom: '25px', right: '25px' }
-const prevStyle = { position: 'absolute', bottom: '25px', left: '25px' }
-
 class App extends Component {
-  handleChangePage = e => {
-    const nextPage = LINK_PREVIOUS_PAGE_NAME_ATTR === e.currentTarget.name ? 'prev' : 'next'
+  componentDidMount() {
+    window.onkeyup = e => {
+      const key = e.key ? e.key : e.which
 
+      if (key === 'ArrowUp' || key === 'ArrowRight') {
+        this.handleChangePage('next')
+      } else if (key === 'ArrowDown' || key === 'ArrowLeft') {
+        this.handleChangePage('prev')
+      }
+    }
+  }
+
+  handleChangePage = side => {
     const currentPage = document.location.pathname
 
-    if (!!NAVIGATION[currentPage][nextPage]) {
-      this.history.push(NAVIGATION[currentPage][nextPage])
+    if (!!NAVIGATION[currentPage][side]) {
+      this.history.push(NAVIGATION[currentPage][side])
     }
   }
 
@@ -85,35 +86,19 @@ class App extends Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
-        <Fragment>
-          <Router history={this.history}>
-            <Switch>
-              <Route exact path="/" render={this.renderRoot} />
-              <Route path={URL_WAITING_PAGE} component={this.renderWaitingTitle} />
-              <Route path={URL_TITLE_PAGE} component={this.renderTitle} />
-              <Route path={URL_ABOUT_US_PAGE} component={this.renderAboutUs} />
-              <Route path={URL_LIVE_CODING_PAGE} component={this.renderLiveCoding} />
-              <Route path={URL_USEFUL_LINKS_PAGE} component={this.renderUsefulLinks} />
-              <Route path={URL_QUESTION_PAGE} component={this.renderQuestion} />
-              <Route path={URL_END_PAGE} component={this.renderEnd} />
-              <NotFoundPage />
-            </Switch>
-          </Router>
-          <Image
-            width="50px"
-            src={ArrowLeft}
-            name={LINK_PREVIOUS_PAGE_NAME_ATTR}
-            style={prevStyle}
-            onClick={this.handleChangePage}
-          />
-          <Image
-            width="50px"
-            src={ArrowRight}
-            name={LINK_NEXT_PAGE_NAME_ATTR}
-            style={nextStyle}
-            onClick={this.handleChangePage}
-          />
-        </Fragment>
+        <Router history={this.history}>
+          <Switch>
+            <Route exact path="/" render={this.renderRoot} />
+            <Route path={URL_WAITING_PAGE} component={this.renderWaitingTitle} />
+            <Route path={URL_TITLE_PAGE} component={this.renderTitle} />
+            <Route path={URL_ABOUT_US_PAGE} component={this.renderAboutUs} />
+            <Route path={URL_LIVE_CODING_PAGE} component={this.renderLiveCoding} />
+            <Route path={URL_USEFUL_LINKS_PAGE} component={this.renderUsefulLinks} />
+            <Route path={URL_QUESTION_PAGE} component={this.renderQuestion} />
+            <Route path={URL_END_PAGE} component={this.renderEnd} />
+            <NotFoundPage />
+          </Switch>
+        </Router>
       </ThemeProvider>
     )
   }
