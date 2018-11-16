@@ -31,7 +31,7 @@ const links = [
 ]
 
 class UsefulLinks extends Component {
-  renderLi() {
+  renderRows() {
     const lines = []
     forEach(links, link => {
       lines.push(
@@ -72,7 +72,7 @@ class UsefulLinks extends Component {
       <AnimatedContainerFlex fd="column">
         <Title color="black">Liens Utiles</Title>
         <List>
-          <tbody>{this.renderLi()}</tbody>
+          <tbody>{this.renderRows()}</tbody>
         </List>
       </AnimatedContainerFlex>
     )
