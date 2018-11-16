@@ -30,15 +30,11 @@ import {
 
 class App extends Component {
   componentDidMount() {
-    window.onkeyup = e => {
-      const key = e.key ? e.key : e.which
+    window.addEventListener('keyup', this.keyboardEvent)
+  }
 
-      if (key === 'ArrowUp' || key === 'ArrowRight') {
-        this.handleChangePage('next')
-      } else if (key === 'ArrowDown' || key === 'ArrowLeft') {
-        this.handleChangePage('prev')
-      }
-    }
+  componentWillUnmount() {
+    window.removeEventListener('keyup', this.keyboardEvent)
   }
 
   handleChangePage = side => {
@@ -46,6 +42,16 @@ class App extends Component {
 
     if (!!NAVIGATION[currentPage][side]) {
       this.history.push(NAVIGATION[currentPage][side])
+    }
+  }
+
+  keyboardEvent = e => {
+    const key = e.key ? e.key : e.which
+
+    if (key === 'ArrowUp' || key === 'ArrowRight') {
+      this.handleChangePage('next')
+    } else if (key === 'ArrowDown' || key === 'ArrowLeft') {
+      this.handleChangePage('prev')
     }
   }
 
