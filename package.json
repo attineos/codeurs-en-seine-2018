@@ -1,7 +1,9 @@
 {
   "name": "codeurs_en_seine_2018",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "author": "Attineos <contact@attineos.com>",
+  "license": "MIT",
   "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2",

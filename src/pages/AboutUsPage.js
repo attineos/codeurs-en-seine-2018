@@ -11,7 +11,7 @@ import {
   Title,
 } from '../styles'
 
-import { AttineosLogo, MailjetLogo, Photo } from '../images'
+import { Attineos, Mailjet, Photo } from '../images'
 
 class AboutUsPage extends Component {
   render() {
@@ -40,10 +40,10 @@ class AboutUsPage extends Component {
           </ContainerFlex>
         </ContainerFlex>
         <ContainerFlex fd="column" jc="center" ai="center">
-          <Image src={Photo} h="hp85" alt="logo react et styled-components" />
+          <Image src={Photo} h="hp85" alt="Photo of Marion and Valentin" />
           <ContainerFlex mt="s8" jc="space-around">
-            <Image bgC="white" src={AttineosLogo} h="h75" alt="logo react et styled-components" />
-            <Image bgC="white" src={MailjetLogo} h="h100" alt="logo react et styled-components" />
+            <Image bgC="white" src={Attineos} h="h75" alt="Attineos logo" />
+            <Image bgC="white" src={Mailjet} h="h100" alt="Mailjet logo" />
           </ContainerFlex>
         </ContainerFlex>
         <ContainerFlex fd="column" bc="darkBlue">
@@ -57,7 +57,7 @@ class AboutUsPage extends Component {
             <Paragraph>NodeJS</Paragraph>
             <Paragraph>Overwatch</Paragraph>
             <StyledHr />
-            <Link href="https://twitter.com/MarionDev0" target="_blank" rel="noopener norefer">
+            <Link href="https://twitter.com/V4lulz" target="_blank" rel="noopener norefer">
               Twitter : <b>@V4lulz</b>
             </Link>
           </ContainerFlex>

@@ -2,7 +2,7 @@
  * Different sizes values
  */
 const sizes = {
-  width: {
+  widths: {
     w75: '75px',
     w100: '100px',
     w200: '200px',
@@ -10,7 +10,7 @@ const sizes = {
     wp30: '30%',
     wp75: '75%',
   },
-  height: {
+  heights: {
     h50: '50px',
     h75: '75px',
     h100: '100px',

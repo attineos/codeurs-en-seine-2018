@@ -59,21 +59,21 @@ function getAnimation(mode) {
 }
 
 const Image = styled.img`
-  margin-top: ${({ mt, theme }) => theme.spaces[mt]};
-  margin-bottom: ${({ mb, theme }) => theme.spaces[mb]};
-  margin-left: ${({ ml, theme }) => theme.spaces[ml]};
-  margin-right: ${({ mr, theme }) => theme.spaces[mr]};
+  margin-top: ${({ mt, theme }) => theme.spaces[mt] || mt};
+  margin-bottom: ${({ mb, theme }) => theme.spaces[mb] || mb};
+  margin-left: ${({ ml, theme }) => theme.spaces[ml] || ml};
+  margin-right: ${({ mr, theme }) => theme.spaces[mr] || mr};
 
-  background-color: ${({ bc, theme }) => theme.colors[bc]};
+  background-color: ${({ bc, theme }) => theme.colors[bc] || bc};
 
-  position: ${({ position }) => position || null};
-  top: ${({ t }) => t || null};
-  left: ${({ l }) => l || null};
-  right: ${({ r }) => r || null};
-  bottom: ${({ b }) => b || null};
+  position: ${({ position }) => position};
+  top: ${({ t }) => t};
+  left: ${({ l }) => l};
+  right: ${({ r }) => r};
+  bottom: ${({ b }) => b};
 
-  width: ${({ w, theme }) => theme.sizes.width[w]};
-  height: ${({ h, theme }) => theme.sizes.height[h]};
+  width: ${({ w, theme }) => theme.sizes.widths[w] || w};
+  height: ${({ h, theme }) => theme.sizes.heights[h] || h};
 
   animation-name: ${({ mode }) => getAnimation(mode)};
   animation-duration: ${({ speed }) => speed};

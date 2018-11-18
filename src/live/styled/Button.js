@@ -1,20 +1,21 @@
 /* eslint-disable */
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
+import { colors as c } from '../../variables'
 
 // Given a specific speed, returns its associated background colors
 const SPEED_TO_COLOR = {
   '1s': {
-    background: 'salmon',
-    backgroundHover: 'red',
+    background: c.red,
+    backgroundHover: c.lightRed,
   },
   '2s': {
-    background: 'darkOrange',
-    backgroundHover: 'orange',
+    background: c.orange,
+    backgroundHover: c.lightOrange,
   },
   '3s': {
-    background: 'limeGreen',
-    backgroundHover: 'lime',
+    background: c.green,
+    backgroundHover: c.lightGreen,
   },
 }
 

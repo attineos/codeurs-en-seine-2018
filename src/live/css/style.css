@@ -15,27 +15,27 @@
 }
 
 .Button[data-speed='1s'] {
-  background: salmon;
+  background: #e4301f; /* RED */
 }
 
 .Button[data-speed='2s'] {
-  background: darkOrange;
+  background: #f7b20d; /* ORANGE */
 }
 
 .Button[data-speed='3s'] {
-  background: limeGreen;
+  background: #32cd32; /* GREEN */
 }
 
 .Button[data-speed='1s']:hover {
-  background: red;
+  background: #e9594b; /* LIGHT_RED */
 }
 
 .Button[data-speed='2s']:hover {
-  background: orange;
+  background: #f8c13d; /* LIGHT_ORANGE */
 }
 
 .Button[data-speed='3s']:hover {
-  background: lime;
+  background: #5ad75a; /* LIGHT_GREEN */
 }
 
 .Button * {

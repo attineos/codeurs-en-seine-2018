@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 
 const Title = styled.h2`
-  color: ${({ theme }) =>
-    theme.components.text ? theme.components.text.color : theme.colors.darkBlue};
+  color: ${({ theme }) => (theme.text ? theme.text.color : theme.colors.darkBlue)};
 
   font-family: ${({ theme }) => theme.fonts.fontFamily.oswald};
   font-size: ${({ theme }) => theme.fonts.fontSize.fs35};

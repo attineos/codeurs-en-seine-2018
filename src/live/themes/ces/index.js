@@ -1,30 +1,28 @@
 import { colors as c } from '../../../variables'
+// eslint-disable-next-line no-unused-vars
 import { CES } from '../../../images'
 
 const cesTheme = {
-  components: {
-    button: {
-      icon: CES,
-      color: c.white,
-      '1s': {
-        background: c.salmon,
-        backgroundHover: c.red,
-      },
-      '2s': {
-        background: c.darkOrange,
-        backgroundHover: c.orange,
-      },
-      '3s': {
-        background: c.limeGreen,
-        backgroundHover: c.lime,
-      },
+  button: {
+    color: c.white,
+    '1s': {
+      background: c.red,
+      backgroundHover: c.lightRed,
     },
-    page: {
-      background: c.white,
+    '2s': {
+      background: c.orange,
+      backgroundHover: c.lightOrange,
     },
-    text: {
-      color: c.darkBlue,
+    '3s': {
+      background: c.green,
+      backgroundHover: c.lightGreen,
     },
+  },
+  page: {
+    background: c.white,
+  },
+  text: {
+    color: c.darkBlue,
   },
 }
 

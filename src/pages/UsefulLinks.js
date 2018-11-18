@@ -4,13 +4,13 @@ import forEach from 'lodash/forEach'
 
 import { AnimatedContainerFlex, Cell, Image, Link, List, Row, Title, SubTitle } from '../styles'
 
-import { GithubLogo, ReactLogo, StyledCompoLogo } from '../images'
+import { Github, ReactSvg, StyledCompoLogo } from '../images'
 
 const links = [
   {
     name: 'Notre présentation',
     link: 'Notre futur repo',
-    icon: ReactLogo,
+    icon: ReactSvg,
     icon2: StyledCompoLogo,
   },
   {
@@ -21,12 +21,12 @@ const links = [
   {
     name: 'React',
     link: 'https://reactjs.org/',
-    icon: ReactLogo,
+    icon: ReactSvg,
   },
   {
     name: 'create-react-app',
     link: 'https://github.com/facebook/create-react-app',
-    icon: GithubLogo,
+    icon: Github,
   },
 ]
 
@@ -50,8 +50,8 @@ class UsefulLinks extends Component {
           )}
           {link.icon2 ? (
             <Cell>
-              {link.icon && <Image src={link.icon} h="h50" />}
-              {link.icon2 && <Image src={link.icon2} h="h50" ml="s6" />}
+              {link.icon && <Image src={link.icon} h="h75" />}
+              {link.icon2 && <Image src={link.icon2} h="h75" ml="s6" />}
             </Cell>
           ) : (
             link.icon && (

@@ -4,29 +4,11 @@ import { ThemeProvider } from 'styled-components'
 import { Router, Redirect, Route, Switch } from 'react-router-dom'
 
 import createBrowserHistory from 'history/createBrowserHistory'
-
-import {
-  NAVIGATION,
-  URL_ABOUT_US_PAGE,
-  URL_END_PAGE,
-  URL_QUESTION_PAGE,
-  URL_LIVE_CODING_PAGE,
-  URL_USEFUL_LINKS_PAGE,
-  URL_TITLE_PAGE,
-  URL_WAITING_PAGE,
-} from './config'
+import { ROUTES, NAVIGATION, URL_WAITING_PAGE } from './config'
 
 import theme from './theme'
 
-import {
-  AboutUsPage,
-  LiveCodingPage,
-  NotFoundPage,
-  QuestionPage,
-  SummaryPage,
-  TitlePage,
-  UsefulLinks,
-} from './pages'
+import { NotFoundPage } from './pages'
 
 class App extends Component {
   componentDidMount() {
@@ -61,32 +43,8 @@ class App extends Component {
     return <Redirect to={URL_WAITING_PAGE} />
   }
 
-  renderAboutUs() {
-    return <AboutUsPage />
-  }
-
-  renderLiveCoding() {
-    return <LiveCodingPage />
-  }
-
-  renderEnd() {
-    return <SummaryPage bc="black" />
-  }
-
-  renderQuestion() {
-    return <QuestionPage />
-  }
-
-  renderUsefulLinks() {
-    return <UsefulLinks />
-  }
-
-  renderTitle() {
-    return <TitlePage />
-  }
-
-  renderWaitingTitle() {
-    return <SummaryPage bc="darkBlue" />
+  renderRoute({ path, component }) {
+    return <Route key={path} path={path} component={() => component} />
   }
 
   render() {
@@ -95,13 +53,7 @@ class App extends Component {
         <Router history={this.history}>
           <Switch>
             <Route exact path="/" render={this.renderRoot} />
-            <Route path={URL_WAITING_PAGE} component={this.renderWaitingTitle} />
-            <Route path={URL_TITLE_PAGE} component={this.renderTitle} />
-            <Route path={URL_ABOUT_US_PAGE} component={this.renderAboutUs} />
-            <Route path={URL_LIVE_CODING_PAGE} component={this.renderLiveCoding} />
-            <Route path={URL_USEFUL_LINKS_PAGE} component={this.renderUsefulLinks} />
-            <Route path={URL_QUESTION_PAGE} component={this.renderQuestion} />
-            <Route path={URL_END_PAGE} component={this.renderEnd} />
+            {ROUTES.map(this.renderRoute)}
             <NotFoundPage />
           </Switch>
         </Router>

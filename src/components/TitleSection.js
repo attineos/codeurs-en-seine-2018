@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import { ContainerFlex, Image, SubTitle, Title } from '../styles'
 
-import { CodeursEnSeineLogoWhite } from '../images'
+import { CodeursEnSeine } from '../images'
 
 class TitleSection extends Component {
   render() {
@@ -17,12 +17,7 @@ class TitleSection extends Component {
           <SubTitle>Valentin DESPORTES</SubTitle>
         </ContainerFlex>
         <ContainerFlex h="hp30" jc="space-around" ai="flex-end">
-          <Image
-            src={CodeursEnSeineLogoWhite}
-            h="h200"
-            mb="s14"
-            alt="Codeurs en Seine logo white"
-          />
+          <Image src={CodeursEnSeine} h="h200" mb="s14" alt="Codeurs en Seine logo" />
         </ContainerFlex>
       </ContainerFlex>
     )

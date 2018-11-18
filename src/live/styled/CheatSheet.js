@@ -1,19 +1,20 @@
 import styled, { keyframes } from 'styled-components'
 import React from 'react'
+import { colors as c } from '../../variables'
 
 // Given a specific speed, returns its associated background colors
 const SPEED_TO_COLOR = {
   '1s': {
-    background: 'salmon',
-    backgroundHover: 'lightsalmon',
+    background: c.red,
+    backgroundHover: c.lightRed,
   },
   '2s': {
-    background: 'darkorange',
-    backgroundHover: 'orange',
+    background: c.orange,
+    backgroundHover: c.lightOrange,
   },
   '3s': {
-    background: 'limegreen',
-    backgroundHover: 'lime',
+    background: c.green,
+    backgroundHover: c.lightGreen,
   },
 }
 
@@ -35,17 +36,17 @@ const Button = styled.button.attrs({
   colors: props => SPEED_TO_COLOR[props.speed],
   children: props => (
     <Content speed={props.speed}>
-      <img alt="icon" width={100} height={100} src={props.theme.components.button.icon} />
+      <img alt="icon" width={100} height={100} src={props.theme.button.icon} />
     </Content>
   ),
 })`
-  background: ${props => props.theme.components.button[props.speed].background};
-  color: ${props => props.theme.components.button.color};
+  background: ${props => props.theme.button[props.speed].background};
+  color: ${props => props.theme.button.color};
   font-size: 50px;
   padding: 25px;
 
   &:hover {
-    background: ${props => props.theme.components.button[props.speed].backgroundHover};
+    background: ${props => props.theme.button[props.speed].backgroundHover};
   }
 `
 

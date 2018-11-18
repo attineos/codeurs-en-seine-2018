@@ -6,8 +6,7 @@ const Container = styled.div`
   flex-direction:column;
   align-items:center;
   padding: ${({ theme }) => theme.spaces.s5 || '10px'}
-  background: ${({ theme }) =>
-    theme.components.page ? theme.components.page.background : 'white'};
+  background: ${({ theme }) => (theme.page ? theme.page.background : theme.colors.white)};
 `
 
 export default Container
