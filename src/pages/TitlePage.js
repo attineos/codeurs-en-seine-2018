@@ -14,7 +14,7 @@ class TitlePage extends Component {
           <ContainerFlex fd="column">
             <ContainerFlex jc="space-around" ai="flex-end">
               <Image src={ReactSvg} h="h150" alt="logo reactjs" />
-              <Image src={StyledCompoLogo} h="h150" mb="s7" alt="logo styled-components" />
+              <Image src={StyledCompoLogo} h="h100" mb="s7" alt="logo styled-components" />
             </ContainerFlex>
             <ContainerFlex jc="space-around" ai="flex-start" h="auto">
               <Paragraph mt="s8" color="darkBlue">

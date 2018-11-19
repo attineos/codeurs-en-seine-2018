@@ -9,14 +9,16 @@ import { Github, ReactSvg, StyledCompoLogo } from '../images'
 const links = [
   {
     name: 'Notre présentation',
-    link: 'Notre futur repo',
+    link: 'https://github.com/attineos/codeurs-en-seine-2018',
     icon: ReactSvg,
     icon2: StyledCompoLogo,
+    small2: true,
   },
   {
     name: 'Styled-components',
     link: 'https://www.styled-components.com/',
     icon: StyledCompoLogo,
+    small: true,
   },
   {
     name: 'React',
@@ -50,13 +52,13 @@ class UsefulLinks extends Component {
           )}
           {link.icon2 ? (
             <Cell>
-              {link.icon && <Image src={link.icon} h="h75" />}
-              {link.icon2 && <Image src={link.icon2} h="h75" ml="s6" />}
+              {link.icon && <Image src={link.icon} h={link.small ? 'h75' : 'h100'} />}
+              {link.icon2 && <Image src={link.icon2} h={link.small2 ? 'h75' : 'h100'} ml="s6" />}
             </Cell>
           ) : (
             link.icon && (
               <Cell>
-                <Image src={link.icon} h="h75" />
+                <Image src={link.icon} h={link.small ? 'h75' : 'h100'} />
               </Cell>
             )
           )}
