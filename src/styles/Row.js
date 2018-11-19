@@ -4,7 +4,7 @@ import Cell from './Cell'
 import SubTitle from './SubTitle'
 
 const Row = styled.tr`
-  height: ${({ theme }) => theme.sizes.height.h150};
+  height: ${({ theme }) => theme.sizes.heights.h150};
 
   ${Cell}:first-child {
     text-align: left;

@@ -10,8 +10,8 @@ const Title = styled.h1`
 
   margin-top: ${({ mt, theme }) => theme.spaces[mt] || theme.spaces.s11};
   margin-bottom: ${({ mb, theme }) => theme.spaces[mb] || theme.spaces.s11};
-  margin-right: ${({ mr, theme }) => theme.spaces[mr]};
-  margin-left: ${({ ml, theme }) => theme.spaces[ml]};
+  margin-right: ${({ mr, theme }) => theme.spaces[mr] || mr};
+  margin-left: ${({ ml, theme }) => theme.spaces[ml] || ml};
 
   transform: ${({ flip }) => (flip ? 'scale(-1, -1)' : null)};
 `

@@ -29,11 +29,11 @@ class NotFoundPage extends Component {
           t={`${height / 2 - earthSize / 2}px`}
           l={`${width / 2 - earthSize / 2}px`}
           w="w300" // == earthSize
-          alt="logo"
+          alt="earth"
         />
-        <Image src={MarsPlanetSvg} position="absolute" b="0" l="0" w={planetSize} alt="logo" />
-        <Image src={JupiterSvg} position="absolute" b="0" r="0" w={planetSize} alt="logo" />
-        <Image src={SaturnSvg} position="absolute" t="0" l="0" w={planetSize} alt="logo" />
+        <Image src={MarsPlanetSvg} position="absolute" b="0" l="0" w={planetSize} alt="mars" />
+        <Image src={JupiterSvg} position="absolute" b="0" r="0" w={planetSize} alt="jupiter" />
+        <Image src={SaturnSvg} position="absolute" t="0" l="0" w={planetSize} alt="saturn" />
         <Image
           src={RocketSvg}
           position="absolute"
@@ -42,7 +42,7 @@ class NotFoundPage extends Component {
           w="w100" // == rocketSize
           mode="spin"
           speed="10s"
-          alt="logo"
+          alt="rocket"
         />
         <Image
           src={AstronautSvg}
@@ -52,7 +52,7 @@ class NotFoundPage extends Component {
           mode="verticalFilp"
           w="w100" // == astronautSize
           speed="10s"
-          alt="logo"
+          alt="astronaut"
         />
         <Image
           src={AlienSvg}
@@ -62,7 +62,7 @@ class NotFoundPage extends Component {
           mode="alien"
           w="w75"
           speed="20s"
-          alt="logo"
+          alt="alien"
         />
         <Title mt="s26">Houston nous avons un problème...</Title>
         <Title mb="s30">La page recherchée est introuvable</Title>

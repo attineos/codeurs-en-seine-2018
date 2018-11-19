@@ -1,17 +1,7 @@
-import AboutUsPage from './AboutUsPage'
-import LiveCodingPage from '../live'
-import NotFoundPage from './NotFoundPage'
-import QuestionPage from './QuestionPage'
-import UsefulLinks from './UsefulLinks'
-import SummaryPage from './SummaryPage'
-import TitlePage from './TitlePage'
-
-export {
-  AboutUsPage,
-  LiveCodingPage,
-  NotFoundPage,
-  QuestionPage,
-  UsefulLinks,
-  SummaryPage,
-  TitlePage,
-}
+export { default as AboutUsPage } from './AboutUsPage'
+export { default as LiveCodingPage } from '../live'
+export { default as NotFoundPage } from './NotFoundPage'
+export { default as QuestionPage } from './QuestionPage'
+export { default as UsefulLinks } from './UsefulLinks'
+export { default as SummaryPage } from './SummaryPage'
+export { default as TitlePage } from './TitlePage'

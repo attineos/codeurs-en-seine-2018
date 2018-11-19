@@ -6,8 +6,8 @@ const components = {
     color: c.white,
   },
   link: {
-    color: c.turquoiseBlue,
-    onHoverColor: c.white,
+    color: c.white,
+    onHoverColor: c.turquoiseBlue,
   },
   list: {
     color: c.white,

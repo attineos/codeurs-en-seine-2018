@@ -10,8 +10,8 @@ const Paragraph = styled.p`
 
   margin-top: ${({ mt, theme }) => theme.spaces[mt] || theme.spaces.s4};
   margin-bottom: ${({ mb, theme }) => theme.spaces[mb] || theme.spaces.s4};
-  margin-right: ${({ mr, theme }) => theme.spaces[mr]};
-  margin-left: ${({ ml, theme }) => theme.spaces[ml]};
+  margin-right: ${({ mr, theme }) => theme.spaces[mr] || mr};
+  margin-left: ${({ ml, theme }) => theme.spaces[ml] || ml};
 `
 
 export default Paragraph

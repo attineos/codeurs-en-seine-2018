@@ -4,7 +4,9 @@ const fonts = {
     lato: 'Lato, sans-serif',
   },
   fontSize: {
+    fs20: '20px',
     fs25: '25px',
+    fs30: '30px',
     fs35: '35px',
     fs71: '71px',
   },

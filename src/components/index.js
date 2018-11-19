@@ -1,10 +1,8 @@
-import ContainerFlex from './ContainerFlex'
-import Image from './Image'
-import Line from '../styles/Line'
-import Link from '../styles/Link'
-import List from '../styles/List'
-import Paragraph from '../styles/Paragraph'
-import SubTitle from '../styles/SubTitle'
-import Title from '../styles/Title'
-
-export { ContainerFlex, Image, Line, Link, List, Paragraph, SubTitle, Title }
+export { default as ContainerFlex } from './ContainerFlex'
+export { default as Image } from './Image'
+export { default as Line } from '../styles/Line'
+export { default as Link } from '../styles/Link'
+export { default as List } from '../styles/List'
+export { default as Paragraph } from '../styles/Paragraph'
+export { default as SubTitle } from '../styles/SubTitle'
+export { default as Title } from '../styles/Title'

@@ -11,12 +11,18 @@ import ReactLogo from './png/React.js_logo.png'
 import StyledCompoLogo from './png/styled-components.png'
 
 import AlienSvg from './svg/alien.svg'
-import ArrowLeft from './svg/left-arrow.svg'
-import ArrowRight from './svg/right-arrow.svg'
 import AstronautSvg from './svg/astronaut.svg'
-import JupiterSvg from './svg/jupiter.svg'
-import MarsPlanetSvg from './svg/mars.svg'
+import Attineos from './svg/attineos.svg'
+import Batman from './svg/batman.svg'
+import CES from './svg/ces.svg'
+import CodeursEnSeine from './svg/codeurs-en-seine-logo-blanc.svg'
 import EarthSvg from './svg/planet-earth.svg'
+import Github from './svg/github.svg'
+import JupiterSvg from './svg/jupiter.svg'
+import Kindarena from './svg/kindarena.svg'
+import Mailjet from './svg/mailjet.svg'
+import MarsPlanetSvg from './svg/mars.svg'
+import ReactSvg from './svg/react.svg'
 import RocketSvg from './svg/rocket.svg'
 import SaturnSvg from './svg/saturn.svg'
 
@@ -24,23 +30,29 @@ import IdeaJpg from './jpg/idea.jpg'
 
 export {
   AlienSvg,
-  ArrowLeft,
-  ArrowRight,
   AstronautSvg,
+  Attineos,
   AttineosLogo,
+  Batman,
+  CES,
+  CodeursEnSeine,
   CodeursEnSeineLogo,
   CodeursEnSeineLogoWhite,
   EarthSvg,
+  Github,
   GithubLogo,
   IdeaJpg,
   JupiterSvg,
+  Kindarena,
   KindarenaLogo,
   KindarenaLogoLong,
   LodashLogo,
+  Mailjet,
   MailjetLogo,
   MarsPlanetSvg,
   Photo,
   ReactLogo,
+  ReactSvg,
   RocketSvg,
   SaturnSvg,
   StyledCompoLogo,
