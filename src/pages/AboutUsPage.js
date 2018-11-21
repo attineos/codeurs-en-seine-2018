@@ -43,7 +43,7 @@ class AboutUsPage extends Component {
           <Image src={Photo} h="hp85" alt="Photo of Marion and Valentin" />
           <ContainerFlex mt="s8" jc="space-around" ai="center">
             <Image bgC="white" src={Attineos} h="h75" alt="Attineos logo" />
-            <Image bgC="white" src={Mailjet} h="h120" alt="Mailjet logo" />
+            <Image bgC="white" src={Mailjet} h="h115" alt="Mailjet logo" />
           </ContainerFlex>
         </ContainerFlex>
         <ContainerFlex fd="column" bc="darkBlue">

@@ -39,16 +39,16 @@ const Content = styled.span`
 `
 
 const Button = styled.button.attrs({
-  children: (props) => <Content speed={props.speed} />
+  children: props => <Content speed={props.speed} />,
 })`
   color: ${props => props.theme.button.color};
   font-size: 50px;
   padding: 25px;
-  
+
   background: ${props => props.theme.button[props.speed].background};
-  
+
   &:hover {
-    background: ${props => props.theme.button[props.speed].backgroundHover}
+    background: ${props => props.theme.button[props.speed].backgroundHover};
   }
 `
 
