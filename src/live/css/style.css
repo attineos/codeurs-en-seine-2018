@@ -38,7 +38,8 @@
   background: #5ad75a; /* LIGHT_GREEN */
 }
 
-.Button * {
+.Button span {
+  display: block;
   animation-iteration-count: infinite;
   animation-name: rotateCss;
   animation-timing-function: linear;

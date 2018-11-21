@@ -3,7 +3,7 @@ import './style.css'
 
 const ButtonCSS = ({ onClick, speed }) => (
   <button className="Button" type="button" onClick={onClick} data-speed={speed}>
-    <div style={{ animationDuration: speed }}>Text</div>
+    <span style={{ animationDuration: speed }}>Text</span>
   </button>
 )
 
